@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0855AAF3-1BC6-4F10-B1F4-88178DA91B72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClothingPSISQLite.Library</RootNamespace>
+    <AssemblyName>ClothingPSISQLite.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarCodeHelper.cs" />
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_AccessConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_AccessConfig.Designer.cs">
+      <DependentUpon>ucEx_AccessConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_OracleConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_OracleConfig.Designer.cs">
+      <DependentUpon>ucEx_OracleConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_SQLConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_SQLConfig.Designer.cs">
+      <DependentUpon>ucEx_SQLConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_SQLite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\ucEx_SQLite.Designer.cs">
+      <DependentUpon>ucEx_SQLite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\frmDBConfigNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\frmDBConfigNew.Designer.cs">
+      <DependentUpon>frmDBConfigNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\RibbonButtons\ButtonName.cs" />
+    <Compile Include="DataBinder.cs" />
+    <Compile Include="DataBinderTools.cs" />
+    <Compile Include="Config\DBConnBuilder\controls\IUCDBConfig.cs" />
+    <Compile Include="Config\DBConnBuilder\DB_Oracle.cs" />
+    <Compile Include="Config\DBConnBuilder\controls\uc_AccessConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_AccessConfig.Designer.cs">
+      <DependentUpon>uc_AccessConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_OracleConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_OracleConfig.designer.cs">
+      <DependentUpon>uc_OracleConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\DBConfig.cs" />
+    <Compile Include="Config\DBConnBuilder\DB_Access.cs" />
+    <Compile Include="Config\Config.cs" />
+    <Compile Include="Config\DBConnBuilder\IDB.cs" />
+    <Compile Include="Config\DBConnBuilder\frmDBConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\frmDBConfig.Designer.cs">
+      <DependentUpon>frmDBConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_SQLiteConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_SQLiteConfig.Designer.cs">
+      <DependentUpon>uc_SQLiteConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\RibbonButtons\RibbonItemButton.cs" />
+    <Compile Include="Config\RibbonButtons\RibbonItemNavButton.cs" />
+    <Compile Include="Config\DBConnBuilder\controls\uc_SQLConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config\DBConnBuilder\controls\uc_SQLConfig.designer.cs">
+      <DependentUpon>uc_SQLConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindingRILUE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBindingRILUE.Designer.cs">
+      <DependentUpon>DataBindingRILUE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindingLUE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBindingLUE.Designer.cs">
+      <DependentUpon>DataBindingLUE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindingProvider.cs" />
+    <Compile Include="DevelopmentEnvironment.cs" />
+    <Compile Include="ModuleFun\GZFunctionLayout.cs" />
+    <Compile Include="ModuleFun\GZLockMouse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleFun\GZTable.cs" />
+    <Compile Include="ModuleFun\GZTableCell.cs" />
+    <Compile Include="ModuleFun\GZTableLayout.cs" />
+    <Compile Include="ModuleFun\GZTableRow.cs" />
+    <Compile Include="Config\RibbonButtons\RibbonCommonButtons.cs" />
+    <Compile Include="Config\RibbonButtons\RibbonCommonNavButtons.cs" />
+    <Compile Include="Config\RibbonButtons\RiibonButtonsConfig.cs" />
+    <Compile Include="ModuleFun\ScreenCapture.cs" />
+    <Compile Include="ModuleProvider\frmModuleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleProvider\frmModuleBase.Designer.cs">
+      <DependentUpon>frmModuleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleProvider\LoadModuleHelper.cs" />
+    <Compile Include="MyClass\ApplicationEx.cs" />
+    <Compile Include="MyClass\GridControlTools.cs" />
+    <Compile Include="MyClass\GridviewCustomerPopMenu.cs" />
+    <Compile Include="MyClass\LoadUIImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyClass\MessageBoxEx.cs" />
+    <Compile Include="MyClass\SkinTools.cs" />
+    <Compile Include="MyClass\Tools_VerificationEditValue.cs" />
+    <Compile Include="MyClass\TreeListInitial.cs" />
+    <Compile Include="MyControl\CommonSearchEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\frmDialog_CommonSearchConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControl\frmDialog_CommonSearchConfig.Designer.cs">
+      <DependentUpon>frmDialog_CommonSearchConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\frmDialog_CommonSearchSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControl\frmDialog_CommonSearchSetting.Designer.cs">
+      <DependentUpon>frmDialog_CommonSearchSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\frmGridViewLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControl\frmGridViewLayout.Designer.cs">
+      <DependentUpon>frmGridViewLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\GridControlTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControl\GridControlTools.designer.cs">
+      <DependentUpon>GridControlTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\GridControlToolsButtons.cs" />
+    <Compile Include="MyControl\GridViewPopMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\GridViewPopMenu.Designer.cs">
+      <DependentUpon>GridViewPopMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControl\DateEditYearMonth.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\RepositoryItemGZGridLookUpEdit_MultiFilter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\ucAppStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\ucLookUpEditAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControl\ucModuleTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyForm\frmApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frmApp.designer.cs">
+      <DependentUpon>frmApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Config\DBConnBuilder\DB_SQL.cs" />
+    <Compile Include="Config\DBConnBuilder\DB_SQLite.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTextEdit\frmDialogDataSearchBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchTextEdit\frmDialogDataSearchBase.Designer.cs">
+      <DependentUpon>frmDialogDataSearchBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTextEdit\SearchButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothingPSISQLite.Business\ClothingPSISQLite.BusinessSQLite.csproj">
+      <Project>{17e1fce4-5ee1-411b-bb13-adc81aa6193f}</Project>
+      <Name>ClothingPSISQLite.BusinessSQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothingPSISQLite.Common\ClothingPSISQLite.Common.csproj">
+      <Project>{3fe77ebd-7182-4cf4-8b2c-811af8244b5b}</Project>
+      <Name>ClothingPSISQLite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothingPSISQLite.Models\ClothingPSISQLite.Models.csproj">
+      <Project>{32e5f6a4-4d24-40e8-b62e-9be380db37ef}</Project>
+      <Name>ClothingPSISQLite.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZDBHelper\GZDBHelper.csproj">
+      <Project>{879158ef-ef85-4b55-91ef-21399e108cd7}</Project>
+      <Name>GZDBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.DB\GZFramework.DB.csproj">
+      <Project>{3986c490-ccd4-4328-b96b-1fba69cb7238}</Project>
+      <Name>GZFramework.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.UI.Core\GZFramework.UI.Core.csproj">
+      <Project>{aa52a8ca-7844-45b0-bbd0-86ba98ab468a}</Project>
+      <Name>GZFramework.UI.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.UI.Dev.Controls\GZFramework.UI.Dev.Controls.csproj">
+      <Project>{f7269578-4807-4b61-b7de-2b82fd45213b}</Project>
+      <Name>GZFramework.UI.Dev.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.UI.Dev\GZFramework.UI.Dev.csproj">
+      <Project>{5729d5dc-a77a-4218-9aa5-066527399da9}</Project>
+      <Name>GZFramework.UI.Dev</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\ucEx_AccessConfig.resx">
+      <DependentUpon>ucEx_AccessConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\ucEx_OracleConfig.resx">
+      <DependentUpon>ucEx_OracleConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\ucEx_SQLConfig.resx">
+      <DependentUpon>ucEx_SQLConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\ucEx_SQLite.resx">
+      <DependentUpon>ucEx_SQLite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\uc_AccessConfig.resx">
+      <DependentUpon>uc_AccessConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\uc_OracleConfig.resx">
+      <DependentUpon>uc_OracleConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\frmDBConfigNew.resx">
+      <DependentUpon>frmDBConfigNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\frmDBConfig.resx">
+      <DependentUpon>frmDBConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\uc_SQLConfig.resx">
+      <DependentUpon>uc_SQLConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\DBConnBuilder\controls\uc_SQLiteConfig.resx">
+      <DependentUpon>uc_SQLiteConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\frmDialog_CommonSearchConfig.resx">
+      <DependentUpon>frmDialog_CommonSearchConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\frmDialog_CommonSearchSetting.resx">
+      <DependentUpon>frmDialog_CommonSearchSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\frmGridViewLayout.resx">
+      <DependentUpon>frmGridViewLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\GridControlTools.resx">
+      <DependentUpon>GridControlTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\GridViewPopMenu.resx">
+      <DependentUpon>GridViewPopMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControl\ucAppStatus.resx">
+      <DependentUpon>ucAppStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frmApp.resx">
+      <DependentUpon>frmApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchTextEdit\frmDialogDataSearchBase.resx">
+      <DependentUpon>frmDialogDataSearchBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

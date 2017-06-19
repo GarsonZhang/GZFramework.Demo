@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5729D5DC-A77A-4218-9AA5-066527399DA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GZFramework.UI.Dev</RootNamespace>
+    <AssemblyName>GZFramework.UI.Dev</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GZDBHelper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GZDBHelper.1.5.0.5\lib\GZDBHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GZFramework.DB, Version=2.0.9527.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GZFramework.DB.2.0.5.5\lib\GZFramework.DB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GZFramework.UI.Core, Version=2.0.9527.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GZFramework.UI.Core.2.0.0\lib\GZFramework.UI.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DataBinder.cs" />
+    <Compile Include="Common\LibraryTools.cs" />
+    <Compile Include="Common\Msg.cs" />
+    <Compile Include="GZSplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GZSplashScreen1.designer.cs">
+      <DependentUpon>GZSplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GZWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GZWaitForm.Designer.cs">
+      <DependentUpon>GZWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibForm\frmBaseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBaseData.Designer.cs">
+      <DependentUpon>frmBaseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibForm\frmBaseDataBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBaseDataBusiness.Designer.cs">
+      <DependentUpon>frmBaseDataBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibForm\frmBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBaseDialog.Designer.cs">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibForm\frmBaseFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBaseFunction.Designer.cs">
+      <DependentUpon>frmBaseFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lic.cs" />
+    <Compile Include="Module\frmModuleMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmModuleMainBase.Designer.cs">
+      <DependentUpon>frmModuleMainBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonButton\RibbonBarButtonCollection.cs" />
+    <Compile Include="LibForm\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibForm\frmBaseChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibForm\frmBaseChild.Designer.cs">
+      <DependentUpon>frmBaseChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RibbonButton\RibbonLoad.cs" />
+    <Compile Include="RibbonButton\RibbonControlGenerate.cs" />
+    <Compile Include="SplashScreenServer.cs" />
+    <Compile Include="WaiteServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GZSplashScreen1.resx">
+      <DependentUpon>GZSplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GZWaitForm.resx">
+      <DependentUpon>GZWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBaseData.resx">
+      <DependentUpon>frmBaseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBaseDataBusiness.resx">
+      <DependentUpon>frmBaseDataBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBaseDialog.resx">
+      <DependentUpon>frmBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBaseFunction.resx">
+      <DependentUpon>frmBaseFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibForm\frmBaseChild.resx">
+      <DependentUpon>frmBaseChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmModuleMainBase.resx">
+      <DependentUpon>frmModuleMainBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GZFramework.UI.Dev.Controls\GZFramework.UI.Dev.Controls.csproj">
+      <Project>{f7269578-4807-4b61-b7de-2b82fd45213b}</Project>
+      <Name>GZFramework.UI.Dev.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\hide_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

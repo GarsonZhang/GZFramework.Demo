@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D67E221-D1F6-40AA-B3D8-1196A714F682}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClothingPSISQLite.SystemManagement</RootNamespace>
+    <AssemblyName>ClothingPSISQLite.SystemManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GZFramework.UI.Dev.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GZFramework\Debug\GZFramework.UI.Dev.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialog\frmDialog_MenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\frmDialog_MenuEdit.Designer.cs">
+      <DependentUpon>frmDialog_MenuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyInfo.Designer.cs">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialogChangeDBText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialogChangeDBText.Designer.cs">
+      <DependentUpon>frmDialogChangeDBText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialog_DBList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog_DBList.Designer.cs">
+      <DependentUpon>frmDialog_DBList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialog_RoleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog_RoleList.Designer.cs">
+      <DependentUpon>frmDialog_RoleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModuleMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModuleMain.Designer.cs">
+      <DependentUpon>frmModuleMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMyRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMyRole.designer.cs">
+      <DependentUpon>frmMyRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMyUser.designer.cs">
+      <DependentUpon>frmMyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRibbonStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRibbonStyle.Designer.cs">
+      <DependentUpon>frmRibbonStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemAuthority.Designer.cs">
+      <DependentUpon>frmSystemAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\frmDialog_MenuEdit.resx">
+      <DependentUpon>frmDialog_MenuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyInfo.resx">
+      <DependentUpon>frmCompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialogChangeDBText.resx">
+      <DependentUpon>frmDialogChangeDBText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog_DBList.resx">
+      <DependentUpon>frmDialog_DBList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog_RoleList.resx">
+      <DependentUpon>frmDialog_RoleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModuleMain.resx">
+      <DependentUpon>frmModuleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMyRole.resx">
+      <DependentUpon>frmMyRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMyUser.resx">
+      <DependentUpon>frmMyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRibbonStyle.resx">
+      <DependentUpon>frmRibbonStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemAuthority.resx">
+      <DependentUpon>frmSystemAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothingPSISQLite.Business\ClothingPSISQLite.BusinessSQLite.csproj">
+      <Project>{17e1fce4-5ee1-411b-bb13-adc81aa6193f}</Project>
+      <Name>ClothingPSISQLite.BusinessSQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothingPSISQLite.Common\ClothingPSISQLite.Common.csproj">
+      <Project>{3fe77ebd-7182-4cf4-8b2c-811af8244b5b}</Project>
+      <Name>ClothingPSISQLite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothingPSISQLite.Library\ClothingPSISQLite.Library.csproj">
+      <Project>{0855aaf3-1bc6-4f10-b1f4-88178da91b72}</Project>
+      <Name>ClothingPSISQLite.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClothingPSISQLite.Models\ClothingPSISQLite.Models.csproj">
+      <Project>{32e5f6a4-4d24-40e8-b62e-9be380db37ef}</Project>
+      <Name>ClothingPSISQLite.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.DB\GZFramework.DB.csproj">
+      <Project>{3986c490-ccd4-4328-b96b-1fba69cb7238}</Project>
+      <Name>GZFramework.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.UI.Core\GZFramework.UI.Core.csproj">
+      <Project>{aa52a8ca-7844-45b0-bbd0-86ba98ab468a}</Project>
+      <Name>GZFramework.UI.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.UI.Dev\GZFramework.UI.Dev.csproj">
+      <Project>{5729d5dc-a77a-4218-9aa5-066527399da9}</Project>
+      <Name>GZFramework.UI.Dev</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
