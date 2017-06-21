@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ReportInfo.Created="12/29/2016 17:01:22" ReportInfo.Modified="12/29/2016 17:22:23" ReportInfo.CreatorVersion="1.2.47.0">
+  <Dictionary>
+    <Parameter Name="PrintUser" DataType="System.String"/>
+    <Parameter Name="PrintDate" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <PageHeaderBand Name="PageHeader1" Width="718.2" Height="56.7">
+      <TextObject Name="Text1" Left="233.42" Width="251.37" Height="28.35" Text="库存详情列表" HorzAlign="Center" Font="Arial, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Left="62.37" Top="32.13" Width="94.5" Height="24.57" Border.Lines="All" Text="产品编号" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text3" Left="156.87" Top="32.13" Width="94.5" Height="24.57" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text4" Left="251.37" Top="32.13" Width="94.5" Height="24.57" Border.Lines="All" Text="规格" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text5" Left="345.87" Top="32.13" Width="94.5" Height="24.57" Border.Lines="All" Text="材质" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text6" Left="440.37" Top="32.13" Width="56.7" Height="24.57" Border.Lines="All" Text="单位" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text7" Left="497.07" Top="32.13" Width="75.6" Height="24.57" Border.Lines="All" Text="数量" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text14" Left="9.45" Top="32.13" Width="52.92" Height="24.57" Border.Lines="All" Text="序号" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text18" Left="572.67" Top="32.13" Width="145.53" Height="24.57" Border.Lines="All" Text="备注" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text16" Left="572.67" Top="7.56" Width="143.64" Height="18.9" Text="页码:[Page] / [TotalPages#]"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="60.7" Width="718.2" Height="24.57">
+      <TextObject Name="Text8" Left="62.37" Width="94.5" Height="24.57" Border.Lines="All" Text="[D.ProductID]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text9" Left="156.87" Width="94.5" Height="24.57" Border.Lines="All" Text="[D.ProductName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text10" Left="251.37" Width="94.5" Height="24.57" Border.Lines="All" Text="[D.Specification]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text11" Left="345.87" Width="94.5" Height="24.57" Border.Lines="All" Text="[D.Material]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text12" Left="440.37" Width="56.7" Height="24.57" Border.Lines="All" Text="[D.Unit]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text13" Left="497.07" Width="75.6" Height="24.57" Border.Lines="All" Text="[D.Qty]" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text15" Left="9.45" Width="52.92" Height="24.57" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text19" Left="572.67" Width="145.53" Height="24.57" Border.Lines="All" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="89.27" Width="718.2" Height="22.68">
+      <TextObject Name="Text17" Top="3.78" Width="718.2" Height="18.9" Text="打印人：[PrintUser]    打印日期：[PrintDate]" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt">
+        <Formats>
+          <GeneralFormat/>
+          <CustomFormat Format="yyyy-MM-dd HH:mm"/>
+        </Formats>
+      </TextObject>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

@@ -17,7 +17,7 @@ namespace GZFrameworkDemo.Common
         /// <param name="img">图片实例</param>
         /// <returns></returns>
         public static byte[] ConvertImage2Bytes(Image img)
-        {
+        { 
             if (img == null) return null;
             MemoryStream ms = new MemoryStream();
             try

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ReportInfo.Created="12/29/2016 17:24:34" ReportInfo.Modified="01/01/2017 14:02:10" ReportInfo.CreatorVersion="1.2.47.0">
+  <Dictionary>
+    <Parameter Name="PrintUser" DataType="System.String"/>
+    <Parameter Name="PrintDate" DataType="System.String"/>
+    <Parameter Name="TotalAmount" DataType="System.String"/>
+    <Total Name="SummaryAmount" Expression="[D.Amount]" Evaluator="Data1" PrintOn="DataFooter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="241" PaperHeight="140">
+    <ReportTitleBand Name="ReportTitle1" Width="835.38" Height="22.68">
+      <TextObject Name="Text1" Left="292.95" Top="3.78" Width="215.46" Height="18.9" Text="上海续翔五金销售单" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text33" Left="604.8" Top="3.78" Width="154.98" Height="18.9" Text="页码:[Page] / [TotalPages#]" Font="Arial, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="26.68" Width="835.38" Height="62.37">
+      <TextObject Name="Text2" Left="58.59" Top="5.67" Width="406.35" Height="18.9" Text="供应商名称：[M.SupplierName]" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text3" Left="464.94" Top="5.67" Width="296.73" Height="18.9" Text="单据编号：[M.DocNo]" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text5" Left="464.94" Top="24.57" Width="296.73" Height="18.9" Text="单据日期：[M.DocDate]" Format="Custom" Format.Format="yyyy-MM-dd HH:mm" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text7" Left="58.59" Top="24.57" Width="406.35" Height="18.9" Text="联系方式：[M.SupplierPhone] " VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text4" Left="58.59" Top="43.47" Width="41.58" Height="18.9" Border.Lines="All" Text="序号" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text8" Left="100.17" Top="43.47" Width="204.12" Height="18.9" Border.Lines="All" Text="品名规格" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text9" Left="304.29" Top="43.47" Width="62.37" Height="18.9" Border.Lines="All" Text="件/支数" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text10" Left="366.66" Top="43.47" Width="52.92" Height="18.9" Border.Lines="All" Text="单位" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text11" Left="419.58" Top="43.47" Width="52.92" Height="18.9" Border.Lines="All" Text="数量" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text12" Left="472.5" Top="43.47" Width="52.92" Height="18.9" Border.Lines="All" Text="单价" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text13" Left="525.42" Top="43.47" Width="79.38" Height="18.9" Border.Lines="All" Text="金额" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text14" Left="604.8" Top="43.47" Width="154.98" Height="18.9" Border.Lines="All" Text="备注" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="93.05" Width="835.38" Height="18.9">
+      <TextObject Name="Text15" Left="58.59" Width="41.58" Height="18.9" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text16" Left="100.17" Width="204.12" Height="18.9" Border.Lines="All" Text="[D.Material] [D.ProductName] [D.Specification]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text17" Left="304.29" Width="62.37" Height="18.9" Border.Lines="All" Text="[D.JZS]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text18" Left="366.66" Width="52.92" Height="18.9" Border.Lines="All" Text="[D.Unit]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text19" Left="419.58" Width="52.92" Height="18.9" Border.Lines="All" Text="[D.Qty]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text20" Left="472.5" Width="52.92" Height="18.9" Border.Lines="All" Text="[D.Price]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text21" Left="525.42" Width="79.38" Height="18.9" Border.Lines="All" Text="[D.Amount]" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text22" Left="604.8" Width="154.98" Height="18.9" Border.Lines="All" Text="[D.Remark]" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt"/>
+      <DataFooterBand Name="DataFooter1" Top="115.95" Width="835.38" Height="43.47">
+        <TextObject Name="Text23" Left="58.59" Width="466.83" Height="18.9" Border.Lines="All" Text="合计金额(大写)：[TotalAmount]" VertAlign="Center" Font="Arial, 9pt"/>
+        <TextObject Name="Text24" Left="525.42" Width="79.38" Height="18.9" Border.Lines="All" Text="[SummaryAmount]" Format="Currency" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.CurrencySymbol="¥" Format.PositivePattern="0" Format.NegativePattern="2" HorzAlign="Right" VertAlign="Center" Font="Arial, 9pt"/>
+        <TextObject Name="Text25" Left="604.8" Width="154.98" Height="18.9" Border.Lines="All" Text="结算方式：[M.PayType]" VertAlign="Center" Font="Arial, 9pt"/>
+        <TextObject Name="Text31" Left="58.59" Top="24.57" Width="466.83" Height="18.9" Text="打印人：[PrintUser]    打印日期：[PrintDate]" VertAlign="Center" Font="Arial, 9pt"/>
+      </DataFooterBand>
+    </DataBand>
+  </ReportPage>
+</Report>

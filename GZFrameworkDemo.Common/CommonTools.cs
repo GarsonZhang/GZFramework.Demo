@@ -13,7 +13,7 @@ namespace GZFrameworkDemo.Common
             if (SimpleInfoID.Length > 6) return SimpleInfoID;
             else
                 return 'A' + SimpleInfoID.PadLeft(6, '0');
-        }
+        } 
 
         public static string InfoID_GetSimpleInfoID(string InfoID)
         {
