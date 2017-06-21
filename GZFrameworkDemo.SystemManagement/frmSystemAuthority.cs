@@ -17,11 +17,11 @@ namespace GZFrameworkDemo.SystemManagement
     {
 
         DataTable DataSource;
-        BusinessSQLite.bllModules bll;
+        Business.bllModules bll;
         public frmSystemAuthority()
         {
             InitializeComponent();
-            bll = new BusinessSQLite.bllModules();
+            bll = new Business.bllModules();
             this.treeList1.OptionsBehavior.Editable = false;
             this.treeList1.OptionsView.ShowCheckBoxes = true;
             //this.treeList1.OptionsView.ShowColumns = false;

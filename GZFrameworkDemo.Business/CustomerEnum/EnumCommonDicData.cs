@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GZFrameworkDemo.BusinessSQLite.CustomerEnum
+namespace GZFrameworkDemo.Business.CustomerEnum
 {
     public enum EnumCommonDicData
     {

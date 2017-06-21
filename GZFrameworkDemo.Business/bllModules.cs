@@ -1,4 +1,4 @@
-﻿using GZFrameworkDemo.BusinessSQLite.Base;
+﻿using GZFrameworkDemo.Business.Base;
 using GZFrameworkDemo.Models;
 using GZFramework.DB.Lib;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using GZDBHelper;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class bllModules : bllBase
     {
@@ -20,7 +20,7 @@ namespace GZFrameworkDemo.BusinessSQLite
 
         public System.Data.DataSet GetUserModules(string Account)
         {
-            SqlParameterProvider p1 = new GZFrameworkDemo.BusinessSQLite.SqlParameterProvider();
+            SqlParameterProvider p1 = new GZFrameworkDemo.Business.SqlParameterProvider();
             p1.AddParameter("@Account", SqlDbType.VarChar, 20, Account);
             DataSet ds = null;
             DBServices.DB.ExecuteTransaction(db =>

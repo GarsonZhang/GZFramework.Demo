@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using GZFrameworkDemo.BusinessSQLite.Business;
+using GZFrameworkDemo.Business.Business;
 using GZFramework.DB.Lib;
 using GZFramework.UI.Dev.Common;
 using GZFramework.UI.Dev.LibForm;

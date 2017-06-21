@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class SqlParameterProvider : DbParameterBase
     {

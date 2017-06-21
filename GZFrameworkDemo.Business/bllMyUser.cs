@@ -1,11 +1,11 @@
-﻿using GZFrameworkDemo.BusinessSQLite.Base;
+﻿using GZFrameworkDemo.Business.Base;
 using GZFrameworkDemo.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class bllMyUser : bllBase
     {

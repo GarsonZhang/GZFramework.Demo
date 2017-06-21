@@ -12,7 +12,7 @@
 using FastReport;
 using GZDBHelper;
 using GZFramework.DB;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Models;
 using System;
 using System.IO;

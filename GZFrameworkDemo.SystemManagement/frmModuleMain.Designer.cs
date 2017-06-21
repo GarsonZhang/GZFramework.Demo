@@ -34,6 +34,7 @@
             this.btn_CompanyInfo = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SystemAuthority = new DevExpress.XtraEditors.SimpleButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_DBList = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -96,10 +97,20 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_Setting);
             this.flowLayoutPanel1.Controls.Add(this.btn_CompanyInfo);
             this.flowLayoutPanel1.Controls.Add(this.btn_SystemAuthority);
+            this.flowLayoutPanel1.Controls.Add(this.btn_DBList);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(421, 72);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(421, 169);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // btn_DBList
+            // 
+            this.btn_DBList.Location = new System.Drawing.Point(3, 70);
+            this.btn_DBList.Name = "btn_DBList";
+            this.btn_DBList.Size = new System.Drawing.Size(75, 61);
+            this.btn_DBList.TabIndex = 1;
+            this.btn_DBList.Text = "账套维护";
+            this.btn_DBList.Click += new System.EventHandler(this.btn_DBList_Click);
             // 
             // frmModuleMain
             // 
@@ -123,5 +134,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_CompanyInfo;
         private DevExpress.XtraEditors.SimpleButton btn_Setting;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private DevExpress.XtraEditors.SimpleButton btn_DBList;
     }
 }

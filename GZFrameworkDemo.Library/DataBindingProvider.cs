@@ -10,9 +10,9 @@ namespace GZFrameworkDemo.Library
 
     internal class BindingDataC
     {
-        private BusinessSQLite.CustomerEnum.EnumCommonDicData datatype;
+        private Business.CustomerEnum.EnumCommonDicData datatype;
 
-        public BusinessSQLite.CustomerEnum.EnumCommonDicData DataType
+        public Business.CustomerEnum.EnumCommonDicData DataType
         {
             get { return datatype; }
             set { datatype = value; }

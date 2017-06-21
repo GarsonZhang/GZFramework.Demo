@@ -21,6 +21,7 @@ namespace GZFrameworkDemo.SystemManagement
             this.AddFunction(btn_Setting, typeof(frmSetting), "系统设置");
             this.AddFunction(btn_CompanyInfo, typeof(frmCompanyInfo), "公司信息");
             this.AddFunction(btn_SystemAuthority, typeof(frmSystemAuthority), "功能注册");
+            this.AddFunction(btn_DBList, typeof(frmDBList), "账套维护");
         }
         #region 按钮点击事件
         private void btn_User_Click(object sender, EventArgs e)
@@ -48,5 +49,10 @@ namespace GZFrameworkDemo.SystemManagement
             this.ShowChildForm(typeof(frmSetting));
         }
         #endregion
+
+        private void btn_DBList_Click(object sender, EventArgs e)
+        {
+            this.ShowChildForm(typeof(frmDBList));
+        }
     }
 }

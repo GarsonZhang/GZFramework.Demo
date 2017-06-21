@@ -8,7 +8,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using GZFrameworkDemo.Models;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Common;
 using GZFramework.UI.Dev.Module;
 using GZFramework.UI.Core.Module;

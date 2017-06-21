@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class bllData_CompanyInfo : Base.bllBase
     {

@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 using GZFramework.UI.Dev.Common;
 using GZFramework.UI.Dev.LibForm;
-using GZFrameworkDemo.BusinessSQLite.Base;
+using GZFrameworkDemo.Business.Base;
 using GZFrameworkDemo.Models;
 using GZFrameworkDemo.Common;
 using DevExpress.XtraEditors;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Library.MyClass;
 using DevExpress.XtraTreeList.Nodes;
 using GZFrameworkDemo.Library;

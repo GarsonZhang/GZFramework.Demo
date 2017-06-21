@@ -34,16 +34,16 @@ namespace GZFrameworkDemo.Library
 
         #region 绑定数据类型
         [Category("扩展")]
-        [Description("绑定数据类型"), DefaultValue(BusinessSQLite.CustomerEnum.EnumCommonDicData.染料名称)]
-        public BusinessSQLite.CustomerEnum.EnumCommonDicData GetData(RepositoryItemLookUpEdit lue)
+        [Description("绑定数据类型"), DefaultValue(Business.CustomerEnum.EnumCommonDicData.染料名称)]
+        public Business.CustomerEnum.EnumCommonDicData GetData(RepositoryItemLookUpEdit lue)
         {
             if (StyleList.ContainsKey(lue))
             {
                 return StyleList[lue].DataType;
             }
-            return BusinessSQLite.CustomerEnum.EnumCommonDicData.染料名称;
+            return Business.CustomerEnum.EnumCommonDicData.染料名称;
         }
-        public void SetData(RepositoryItemLookUpEdit lue, BusinessSQLite.CustomerEnum.EnumCommonDicData _DataType)
+        public void SetData(RepositoryItemLookUpEdit lue, Business.CustomerEnum.EnumCommonDicData _DataType)
         {
             if (!StyleList.ContainsKey(lue))
             {

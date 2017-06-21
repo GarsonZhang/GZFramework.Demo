@@ -1,7 +1,7 @@
 ﻿
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraTreeList.Nodes;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Common;
 using GZFrameworkDemo.Library;
 using GZFrameworkDemo.Library.MyClass;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using GZFramework.DB;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class bllLogin
     {

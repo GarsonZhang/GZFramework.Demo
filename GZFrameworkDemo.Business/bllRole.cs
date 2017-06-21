@@ -1,4 +1,4 @@
-﻿using GZFrameworkDemo.BusinessSQLite.Base;
+﻿using GZFrameworkDemo.Business.Base;
 using GZFrameworkDemo.Models;
 using GZFrameworkDemo.Models.DocSN;
 using System;
@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public class bllRole : bllBase<SN_RoleID>
     {

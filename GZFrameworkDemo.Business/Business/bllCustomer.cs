@@ -5,7 +5,7 @@ using System.Text;
 using GZFrameworkDemo.Models.DocSN;
 using GZFrameworkDemo.Models;
 
-namespace GZFrameworkDemo.BusinessSQLite.Business
+namespace GZFrameworkDemo.Business.Business
 {
     public class bllCustomer : Base.bllBase<SN_Customer>
     {

@@ -111,11 +111,23 @@
     <Compile Include="frmCompanyInfo.Designer.cs">
       <DependentUpon>frmCompanyInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDBList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDBList.designer.cs">
+      <DependentUpon>frmDBList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDialogChangeDBText.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDialogChangeDBText.Designer.cs">
       <DependentUpon>frmDialogChangeDBText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialog_DBEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog_DBEdit.designer.cs">
+      <DependentUpon>frmDialog_DBEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDialog_DBList.cs">
       <SubType>Form</SubType>
@@ -179,8 +191,14 @@
     <EmbeddedResource Include="frmCompanyInfo.resx">
       <DependentUpon>frmCompanyInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDBList.resx">
+      <DependentUpon>frmDBList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDialogChangeDBText.resx">
       <DependentUpon>frmDialogChangeDBText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog_DBEdit.resx">
+      <DependentUpon>frmDialog_DBEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDialog_DBList.resx">
       <DependentUpon>frmDialog_DBList.cs</DependentUpon>

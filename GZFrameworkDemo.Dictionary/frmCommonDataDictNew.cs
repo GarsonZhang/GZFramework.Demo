@@ -12,10 +12,10 @@ using GZFrameworkDemo.Common;
 using DevExpress.XtraEditors;
 using GZFrameworkDemo.Models;
 using GZFramework.UI.Dev.Common;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFramework.UI.Core;
 using GZFrameworkDemo.Library.Config.RibbonButtons;
-using GZFrameworkDemo.BusinessSQLite.CustomerEnum;
+using GZFrameworkDemo.Business.CustomerEnum;
 
 namespace GZFrameworkDemo.Dictionary
 {

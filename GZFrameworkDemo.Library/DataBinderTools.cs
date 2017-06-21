@@ -1,7 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
-using GZFrameworkDemo.BusinessSQLite;
-using GZFrameworkDemo.BusinessSQLite.CustomerEnum;
+using GZFrameworkDemo.Business;
+using GZFrameworkDemo.Business.CustomerEnum;
 using GZFrameworkDemo.Common;
 using GZFrameworkDemo.Library.MyClass;
 using GZFrameworkDemo.Library.MyControl;

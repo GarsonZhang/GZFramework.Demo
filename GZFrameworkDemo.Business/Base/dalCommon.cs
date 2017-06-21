@@ -11,7 +11,7 @@ using System.Data.Common;
 using System.Linq;
 using GZFrameworkDemo.Common;
 
-namespace GZFrameworkDemo.BusinessSQLite.Base
+namespace GZFrameworkDemo.Business.Base
 {
 
     public class dalCommon : dalBusinessBase

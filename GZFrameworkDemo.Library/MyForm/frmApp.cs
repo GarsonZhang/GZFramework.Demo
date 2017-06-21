@@ -1,4 +1,4 @@
-﻿using GZFrameworkDemo.BusinessSQLite;
+﻿using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Common;
 using GZFrameworkDemo.Models;
 using GZFramework.UI.Dev.LibForm;
@@ -104,7 +104,7 @@ namespace GZFrameworkDemo.Library.MyForm
         bool ValidatePwd()
         {
             string pwd = ConvertLib.ToString(txt_pwd.EditValue);
-            bllLogin bll = new BusinessSQLite.bllLogin();
+            bllLogin bll = new Business.bllLogin();
             bool Success = bll.VerifyPwdEx(Loginer.CurrentLoginer.Account, pwd);
             if (Success == false)
             {

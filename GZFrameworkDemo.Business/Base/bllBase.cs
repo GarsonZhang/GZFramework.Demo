@@ -8,7 +8,7 @@ using System.Text;
 using GZFrameworkDemo.Models.Sys;
 using GZFramework.DB;
 
-namespace GZFrameworkDemo.BusinessSQLite.Base
+namespace GZFrameworkDemo.Business.Base
 {
     public class bllBase<T> : bllBase where T : ModelDocNo, new()
     {

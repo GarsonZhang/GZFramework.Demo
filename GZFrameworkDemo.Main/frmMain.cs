@@ -13,7 +13,7 @@ using System.Drawing;
 using DevExpress.XtraTabbedMdi;
 using GZFramework.UI.Dev.Common;
 using GZFrameworkDemo.Library;
-using GZFrameworkDemo.BusinessSQLite;
+using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Common;
 using GZFrameworkDemo.Library.MyClass;
 using GZFrameworkDemo.Models;

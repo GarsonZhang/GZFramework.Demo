@@ -1,4 +1,4 @@
-﻿using GZFrameworkDemo.BusinessSQLite.CustomerEnum;
+﻿using GZFrameworkDemo.Business.CustomerEnum;
 using GZFrameworkDemo.Models;
 using GZDBHelper;
 using GZFramework.DB;
@@ -8,7 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace GZFrameworkDemo.BusinessSQLite
+namespace GZFrameworkDemo.Business
 {
     public enum EDBName
     {
@@ -78,16 +78,17 @@ namespace GZFrameworkDemo.BusinessSQLite
                         MethodLogin.Add(v);
                 }
             }
-
-            var dbLogin = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.LoginDBCode);
-            dbLogin.Excute(db =>
+            if (!String.IsNullOrEmpty(Loginer.CurrentLoginer.LoginDBCode))
             {
-                foreach (var m in MethodLogin)
+                var dbLogin = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.LoginDBCode);
+                dbLogin.Excute(db =>
                 {
-                    m.Invoke(this, new object[] { db });
-                }
-            });
-
+                    foreach (var m in MethodLogin)
+                    {
+                        m.Invoke(this, new object[] { db });
+                    }
+                });
+            }
             var dbSystem = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.SystemDBCode);
             dbSystem.Excute(db =>
             {
@@ -207,8 +208,8 @@ namespace GZFrameworkDemo.BusinessSQLite
         //    return dt;
         //}
 
-       
-            
+
+
 
         /// <summary>
         /// 刷新缓存
