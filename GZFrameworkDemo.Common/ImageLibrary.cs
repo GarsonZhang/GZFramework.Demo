@@ -37,7 +37,7 @@ namespace GZFrameworkDemo.Common
         /// <param name="MAX_WIDTH">最大宽度</param>
         /// <returns></returns>
         public static Image ResizeImage(Image imgSource, int MAX_WIDTH, int MAX_HEIGHT)
-        {
+        { 
             Image imgOutput = imgSource;
 
             Size size = new Size(0, 0); //用于存储按比例计算后的宽和高参数
