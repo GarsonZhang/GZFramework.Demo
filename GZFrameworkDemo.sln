@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFrameworkDemo.Models", "GZFrameworkDemo.Models\GZFrameworkDemo.Models.csproj", "{32E5F6A4-4D24-40E8-B62E-9BE380DB37EF}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.UI.Dev", "GZFramework.UI.Dev\GZFramework.UI.Dev.csproj", "{5729D5DC-A77A-4218-9AA5-066527399DA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.UI.Dev.Controls", "GZFramework.UI.Dev.Controls\GZFramework.UI.Dev.Controls.csproj", "{F7269578-4807-4B61-B7DE-2B82FD45213B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GZFramework", "GZFramework", "{B6804390-8EF4-4A56-BAD6-7AA674A6E2FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,5 +83,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {9A353D84-7FAF-48AD-B2A5-B440A943C72C}
 	EndGlobalSection
 EndGlobal
