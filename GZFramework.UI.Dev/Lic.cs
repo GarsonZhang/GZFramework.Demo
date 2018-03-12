@@ -9,7 +9,7 @@ namespace GZFramework.UI.Dev
     {
         public static Lic Instance = new Lic();
 
-
+        //cishu 
         private int TrialNum = 0;
         private bool IsLic = false;
         //private string ErrorMsg = "";
