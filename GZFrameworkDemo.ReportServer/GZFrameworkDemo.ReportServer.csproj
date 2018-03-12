@@ -58,14 +58,6 @@
     <Reference Include="FastReport.Editor">
       <HintPath>..\Debug\FastReport.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="GZDBHelper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GZDBHelper.1.5.0.5\lib\GZDBHelper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GZFramework.DB, Version=2.0.9527.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GZFramework.DB.2.0.5.5\lib\GZFramework.DB.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -115,6 +107,14 @@
       <Project>{5729d5dc-a77a-4218-9aa5-066527399da9}</Project>
       <Name>GZFramework.UI.Dev</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZDBHelper\GZDBHelper.csproj">
+      <Project>{879158ef-ef85-4b55-91ef-21399e108cd7}</Project>
+      <Name>GZDBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.DB\GZFramework.DB.csproj">
+      <Project>{3986c490-ccd4-4328-b96b-1fba69cb7238}</Project>
+      <Name>GZFramework.DB</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -126,9 +126,6 @@
     <EmbeddedResource Include="frmRptPreview.resx">
       <DependentUpon>frmRptPreview.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

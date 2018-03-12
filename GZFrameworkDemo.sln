@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.DB", "GZFramewo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.UI.Core", "GZFramework\GZFramework.UI.Core\GZFramework.UI.Core.csproj", "{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFrameworkDemo.HR", "GZFrameworkDemo.HR\GZFrameworkDemo.HR.csproj", "{0CD2A726-A864-46FF-9928-10140D6B26D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD2A726-A864-46FF-9928-10140D6B26D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD2A726-A864-46FF-9928-10140D6B26D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD2A726-A864-46FF-9928-10140D6B26D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD2A726-A864-46FF-9928-10140D6B26D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

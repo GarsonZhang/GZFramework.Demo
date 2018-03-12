@@ -33,14 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GZDBHelper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GZDBHelper.1.5.0.5\lib\GZDBHelper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GZFramework.DB, Version=2.0.9527.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GZFramework.DB.2.0.5.5\lib\GZFramework.DB.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -72,6 +64,7 @@
     <Compile Include="bllRole.cs" />
     <Compile Include="DataCache.cs" />
     <Compile Include="DBServices.cs" />
+    <Compile Include="HR\bllUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlParameterProvider.cs" />
   </ItemGroup>
@@ -83,6 +76,14 @@
     <ProjectReference Include="..\GZFrameworkDemo.Models\GZFrameworkDemo.Models.csproj">
       <Project>{32e5f6a4-4d24-40e8-b62e-9be380db37ef}</Project>
       <Name>GZFrameworkDemo.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZDBHelper\GZDBHelper.csproj">
+      <Project>{879158ef-ef85-4b55-91ef-21399e108cd7}</Project>
+      <Name>GZDBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFramework\GZFramework.DB\GZFramework.DB.csproj">
+      <Project>{3986c490-ccd4-4328-b96b-1fba69cb7238}</Project>
+      <Name>GZFramework.DB</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

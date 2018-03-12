@@ -15,7 +15,7 @@ namespace GZFrameworkDemo.Library
             lstDLL.AddRange(new string[]{
             "GZFrameworkDemo.Dictionary",
             "GZFrameworkDemo.SystemManagement",
-            "GZFrameworkDemo.Demo",
+            "GZFrameworkDemo.HR",
             "GZFrameworkDemo.PSIModule",
             "DyeingFactory.Work"
             });
