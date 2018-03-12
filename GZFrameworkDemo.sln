@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.UI.Dev.Controls
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GZFramework", "GZFramework", "{B6804390-8EF4-4A56-BAD6-7AA674A6E2FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZDBHelper", "GZFramework\GZDBHelper\GZDBHelper.csproj", "{879158EF-EF85-4B55-91EF-21399E108CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.DB", "GZFramework\GZFramework.DB\GZFramework.DB.csproj", "{3986C490-CCD4-4328-B96B-1FBA69CB7238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFramework.UI.Core", "GZFramework\GZFramework.UI.Core\GZFramework.UI.Core.csproj", "{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,9 +83,26 @@ Global
 		{F7269578-4807-4B61-B7DE-2B82FD45213B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7269578-4807-4B61-B7DE-2B82FD45213B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7269578-4807-4B61-B7DE-2B82FD45213B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879158EF-EF85-4B55-91EF-21399E108CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879158EF-EF85-4B55-91EF-21399E108CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879158EF-EF85-4B55-91EF-21399E108CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879158EF-EF85-4B55-91EF-21399E108CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3986C490-CCD4-4328-B96B-1FBA69CB7238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3986C490-CCD4-4328-B96B-1FBA69CB7238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3986C490-CCD4-4328-B96B-1FBA69CB7238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3986C490-CCD4-4328-B96B-1FBA69CB7238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{879158EF-EF85-4B55-91EF-21399E108CD7} = {B6804390-8EF4-4A56-BAD6-7AA674A6E2FB}
+		{3986C490-CCD4-4328-B96B-1FBA69CB7238} = {B6804390-8EF4-4A56-BAD6-7AA674A6E2FB}
+		{AA52A8CA-7844-45B0-BBD0-86BA98AB468A} = {B6804390-8EF4-4A56-BAD6-7AA674A6E2FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
