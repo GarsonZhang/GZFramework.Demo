@@ -30,7 +30,7 @@ namespace GZFrameworkDemo.Models
         /// 自增字段
         /// </summary>
         [ModelPrimaryKey]
-        public const string RowID = "RowID";
+        public const string isid = "isid";
 
         /// <summary>
         /// 账号
