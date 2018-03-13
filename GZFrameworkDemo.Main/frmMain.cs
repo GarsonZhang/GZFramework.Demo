@@ -564,9 +564,30 @@ namespace GZFrameworkDemo.Main
             if (frm == null) return;
             frm.Show();
             frm.Activate();
-            xtraTabbedMdiManager1.Pages[frm].Image = Image.FromHbitmap(frm.Icon.ToBitmap().GetHbitmap());
+            //xtraTabbedMdiManager1.Pages[frm].Image = Image.FromHbitmap(frm.Icon.ToBitmap().GetHbitmap());
+            //UpdateMdiPictureFormPreview(xtraTabbedMdiManager1.Pages[frm], Image.FromHbitmap(frm.Icon.ToBitmap().GetHbitmap()));
         }
 
+        void UpdateMdiPictureFormPreview(XtraMdiTabPage page, Image img)
+        {
+            if (page == null)
+                return;
+            Image preview = null;
+            const int previewHeight = 32;
+            const int previewWidthMax = 64;
+            //int previewHeight = this.imageList3.ImageSize.Height;
+            if (img != null && img.Height > 0 && previewHeight > 0)
+            {
+                int previewWidth = previewHeight * img.Width / img.Height;
+                if (previewWidth > 0)
+                {
+                    if (previewWidth > previewWidthMax)
+                        previewWidth = previewWidthMax;
+                    preview = new Bitmap(img, previewWidth, previewHeight);
+                }
+            }
+            page.Image = preview;
+        }
 
         private void bci_FullScreen_CheckedChanged(object sender, ItemClickEventArgs e)
         {

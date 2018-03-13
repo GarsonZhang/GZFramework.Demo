@@ -27,7 +27,7 @@ namespace GZFrameworkDemo.Main
 
                 #region 设置默认字体、日期格式、汉化dev
 
-                DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("Tahoma", 12);
+                //DevExpress.Utils.AppearanceObject.DefaultFont = new System.Drawing.Font("Tahoma", 12);
 
                 System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CHS");//使用DEV汉化资源文件
 
