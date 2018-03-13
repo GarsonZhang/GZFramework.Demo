@@ -13,8 +13,9 @@ namespace GZFrameworkDemo.Library
         static DevelopmentEnvironment()
         {
             lstDLL.AddRange(new string[]{
-            "GZFrameworkDemo.Dictionary",
-            "GZFrameworkDemo.SystemManagement",
+                "GZFrameworkDemo.SystemManagement",
+                "GZFrameworkDemo.Dictionary",
+                "GZFrameworkDemo.HR"
             });
         }
     }
