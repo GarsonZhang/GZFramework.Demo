@@ -1,23 +1,20 @@
-﻿using FastReport;
-using GZDBHelper;
+﻿using GZDBHelper;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using FastReport;
 
 namespace GZFrameworkDemo.ReportServer
 {
-    /// 报表准备，单表自定义数据源
-    /// </summary>
-    public class RptCommonSimple : RptCommonBase
+    public class RptCommonUnitTable : RptCommonBase
     {
-
         /// <summary>
-        /// 数据源
+        /// 数据源  主表
         /// </summary>
-        private DataTable DataSource { get; set; }
+        private DataTable DataSummary { get; set; }
 
         /// <summary>
         /// 存储过程名称
@@ -34,7 +31,9 @@ namespace GZFrameworkDemo.ReportServer
         public void PrepareDataSource()
         {
             if (ISSP == true)
-                DataSource = db.GetTableSP(SPName, "reprot", Parms);
+            {
+                DataSummary = db.GetTableSP(SPName,"table1", Parms);
+            }
         }
 
         /// <summary>
@@ -43,54 +42,40 @@ namespace GZFrameworkDemo.ReportServer
 
         public event Action<Report> BeforePrepare;
 
-        /// <summary>
-        /// 单表数据报表 直接提供数据源
-        /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="RptFileName"></param>
-        /// <param name="DataSource"></param>
-        public RptCommonSimple(Form owner, string RptFileName, DataTable DataSource)
+        public RptCommonUnitTable(Form owner, string RptFileName, DataTable DataSummary)
             : base(owner, RptFileName)
         {
-            this.DataSource = DataSource.Copy();
             ISSP = false;
-        }
-        /// <summary>
-        /// 单表数据报表 存储过程获得数据源
-        /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="RptFileName"></param>
-        /// <param name="SPName"></param>
-        /// <param name="Parms"></param>
-        public RptCommonSimple(Form owner, string RptFileName, string SPName, IDbParms Parms)
-            : base(owner, RptFileName)
-        {
-            this.SPName = SPName;
-            this.Parms = Parms;
-            ISSP = true;
+            this.DataSummary = DataSummary;
         }
 
+        public RptCommonUnitTable(Form owner, string RptFileName, string SPName, IDbParms Parms)
+            : base(owner, RptFileName)
+        {
+            ISSP = true;
+            this.SPName = SPName;
+            this.Parms = Parms;
+        }
 
         public override Report PrepareReport()
         {
-            Report rpt = null;
+            Report _Report = null;
             try
             {
                 GZFramework.UI.Dev.WaiteServer.ShowWaite(Owner);
-                rpt = LoadReport(RptFileName);
+                _Report = LoadReport(RptFileName);
 
                 PrepareDataSource();
 
-                rpt.RegisterData(DataSource, "D");
+                _Report.RegisterData(DataSummary, "D");
 
-                DataBand dataBandD1 = rpt.FindObject("Data1") as DataBand;
-                dataBandD1.DataSource = rpt.GetDataSource("D");
+                DataBand dataBandD1 = _Report.FindObject("Data1") as DataBand;
+                dataBandD1.DataSource = _Report.GetDataSource("D");
 
-                UpdateRptCommandData(rpt);
+                UpdateRptCommandData(_Report);
 
-                BeforePrepare?.Invoke(rpt);
+                BeforePrepare?.Invoke(_Report);
             }
-
             catch (Exception ex)
             {
                 RptSuccess = false;
@@ -102,16 +87,16 @@ namespace GZFrameworkDemo.ReportServer
                 if (RptSuccess == false)
                 {
                     GZFramework.UI.Dev.Common.Msg.ShowError(RptException.Message);
-                    //rpt = null;
+                    //_Report = null;
                 }
                 //else
                 //{
-                //    rpt.Prepare();//准备工作     
+                //    _Report.Prepare();//准备工作     
+                //    frmRptPreview.Preview(_Report, owner, !ShowPrint);
                 //}
             }
-            return rpt;
+            return _Report;
         }
+
     }
-
-
 }

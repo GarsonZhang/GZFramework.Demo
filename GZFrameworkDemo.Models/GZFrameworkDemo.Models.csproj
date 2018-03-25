@@ -70,14 +70,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\tb_Customer.cs" />
-    <Compile Include="Business\tb_PO.cs" />
+    <Compile Include="Business\dt_Data_Customer.cs" />
     <Compile Include="DocSN\Business\SN_PO.cs" />
     <Compile Include="DocSN\GenerateDocSNRule.cs" />
     <Compile Include="DocSN\Business\SN_Customer.cs" />
     <Compile Include="DocSN\SN_RoleID.cs" />
     <Compile Include="dt_Data_CompanyInfo.cs" />
     <Compile Include="POType.cs" />
+    <Compile Include="Sys\dt_CommonDicData.cs" />
     <Compile Include="Sys\dt_MyUserDBs.cs" />
     <Compile Include="Sys\sys_DataBaseList.cs" />
     <Compile Include="Sys\sys_DataBaseListAuthority.cs" />
@@ -86,7 +86,7 @@
     <Compile Include="sys_CommonSearch.cs" />
     <Compile Include="sys_CommonSearchUser.cs" />
     <Compile Include="sys_DataSN.cs" />
-    <Compile Include="Sys\dt_CommonDicData.cs" />
+    <Compile Include="Sys\——dt_CommonDicData.cs" />
     <Compile Include="Sys\dt_MyRole.cs" />
     <Compile Include="Sys\dt_MyRoleAuthority.cs" />
     <Compile Include="Sys\dt_MyUser.cs" />
@@ -108,6 +108,7 @@
       <Name>GZFramework.DB</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

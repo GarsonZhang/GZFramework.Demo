@@ -27,7 +27,7 @@ namespace GZFrameworkDemo.Models
         [ModelPrimaryKey]
         public const string FunctionID = "FunctionID";
 
-       
+
 
         /// <summary>
         /// ¹¦ÄÜÃû³Æ
@@ -36,8 +36,11 @@ namespace GZFrameworkDemo.Models
         public const string FunctionName = "FunctionName";
 
         [ModelEditField]
+        public const string Image = "Image";
+
+        [ModelEditField]
         public const string Sort = "Sort";
-        
+
 
     }
 }

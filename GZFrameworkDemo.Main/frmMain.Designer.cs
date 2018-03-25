@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -71,17 +70,17 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.dock_Left = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -127,6 +126,7 @@
             this.btn_FrameworkSetting,
             this.btn_Retrurn});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -142,15 +142,15 @@
             this.cmb_HeaderOrientation});
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Show;
-            this.ribbonControl1.Size = new System.Drawing.Size(1031, 128);
+            this.ribbonControl1.Size = new System.Drawing.Size(1473, 195);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "关于";
-            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
             this.barButtonItem5.Id = 5;
-            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             // 
             // barStaticItem1
@@ -158,7 +158,6 @@
             this.barStaticItem1.Caption = "显示样式";
             this.barStaticItem1.Id = 6;
             this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // barItem_RbStyle
             // 
@@ -214,26 +213,26 @@
             // barbtn_Exit
             // 
             this.barbtn_Exit.Caption = "EXIT登出";
-            this.barbtn_Exit.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtn_Exit.Glyph")));
             this.barbtn_Exit.Id = 20;
-            this.barbtn_Exit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barbtn_Exit.LargeGlyph")));
+            this.barbtn_Exit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtn_Exit.ImageOptions.Image")));
+            this.barbtn_Exit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtn_Exit.ImageOptions.LargeImage")));
             this.barbtn_Exit.Name = "barbtn_Exit";
             this.barbtn_Exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtn_Exit_ItemClick);
             // 
             // bbi_Lock
             // 
             this.bbi_Lock.Caption = "锁定离开";
-            this.bbi_Lock.Glyph = ((System.Drawing.Image)(resources.GetObject("bbi_Lock.Glyph")));
             this.bbi_Lock.Id = 21;
+            this.bbi_Lock.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbi_Lock.ImageOptions.Image")));
             this.bbi_Lock.Name = "bbi_Lock";
             this.bbi_Lock.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbi_Lock_ItemClick);
             // 
             // bsi_Modules
             // 
             this.bsi_Modules.Caption = "模块";
-            this.bsi_Modules.Glyph = ((System.Drawing.Image)(resources.GetObject("bsi_Modules.Glyph")));
             this.bsi_Modules.Id = 22;
-            this.bsi_Modules.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bsi_Modules.LargeGlyph")));
+            this.bsi_Modules.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bsi_Modules.ImageOptions.Image")));
+            this.bsi_Modules.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bsi_Modules.ImageOptions.LargeImage")));
             this.bsi_Modules.Name = "bsi_Modules";
             // 
             // bei_PageImagePosition
@@ -300,25 +299,25 @@
             // 
             this.bci_FullScreen.Caption = "全屏";
             this.bci_FullScreen.Id = 29;
+            this.bci_FullScreen.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bci_FullScreen.ImageOptions.LargeImage")));
             this.bci_FullScreen.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F11);
-            this.bci_FullScreen.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bci_FullScreen.LargeGlyph")));
             this.bci_FullScreen.Name = "bci_FullScreen";
             this.bci_FullScreen.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.bci_FullScreen_CheckedChanged);
             // 
             // bsi_Windows
             // 
             this.bsi_Windows.Caption = "窗口";
-            this.bsi_Windows.Glyph = ((System.Drawing.Image)(resources.GetObject("bsi_Windows.Glyph")));
             this.bsi_Windows.Id = 30;
-            this.bsi_Windows.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bsi_Windows.LargeGlyph")));
+            this.bsi_Windows.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bsi_Windows.ImageOptions.Image")));
+            this.bsi_Windows.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bsi_Windows.ImageOptions.LargeImage")));
             this.bsi_Windows.Name = "bsi_Windows";
             // 
             // btn_ClearDataCatch
             // 
             this.btn_ClearDataCatch.Caption = "清空缓存";
-            this.btn_ClearDataCatch.Glyph = ((System.Drawing.Image)(resources.GetObject("btn_ClearDataCatch.Glyph")));
             this.btn_ClearDataCatch.Id = 31;
-            this.btn_ClearDataCatch.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_ClearDataCatch.LargeGlyph")));
+            this.btn_ClearDataCatch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ClearDataCatch.ImageOptions.Image")));
+            this.btn_ClearDataCatch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_ClearDataCatch.ImageOptions.LargeImage")));
             this.btn_ClearDataCatch.Name = "btn_ClearDataCatch";
             this.btn_ClearDataCatch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ClearDataCatch_ItemClick);
             // 
@@ -334,16 +333,16 @@
             // 
             this.btn_FrameworkSetting.Caption = "外观";
             this.btn_FrameworkSetting.Id = 33;
-            this.btn_FrameworkSetting.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_FrameworkSetting.LargeGlyph")));
+            this.btn_FrameworkSetting.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_FrameworkSetting.ImageOptions.LargeImage")));
             this.btn_FrameworkSetting.Name = "btn_FrameworkSetting";
             this.btn_FrameworkSetting.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_FrameworkSetting_ItemClick);
             // 
             // btn_Retrurn
             // 
             this.btn_Retrurn.Caption = "返回";
-            this.btn_Retrurn.Glyph = ((System.Drawing.Image)(resources.GetObject("btn_Retrurn.Glyph")));
             this.btn_Retrurn.Id = 34;
-            this.btn_Retrurn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_Retrurn.LargeGlyph")));
+            this.btn_Retrurn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Retrurn.ImageOptions.Image")));
+            this.btn_Retrurn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_Retrurn.ImageOptions.LargeImage")));
             this.btn_Retrurn.Name = "btn_Retrurn";
             this.btn_Retrurn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Retrurn_ItemClick);
             // 
@@ -448,10 +447,11 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.btn_ClearDataCatch);
             this.ribbonStatusBar1.ItemLinks.Add(this.bbi_Lock);
             this.ribbonStatusBar1.ItemLinks.Add(this.btn_Notice);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 521);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 819);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1031, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1473, 48);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -469,11 +469,12 @@
             this.navBarItem6,
             this.navBarItem7});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.NavigationPaneGroupClientHeight = 10;
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 192;
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 185;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(192, 366);
+            this.navBarControl1.Size = new System.Drawing.Size(185, 583);
             this.navBarControl1.StoreDefaultPaintStyleName = true;
             this.navBarControl1.TabIndex = 7;
             this.navBarControl1.Text = "navBarControl1";
@@ -526,18 +527,20 @@
             this.dock_Left.Controls.Add(this.dockPanel1_Container);
             this.dock_Left.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dock_Left.ID = new System.Guid("f90135bd-ba90-42d3-8839-8b831b851179");
-            this.dock_Left.Location = new System.Drawing.Point(0, 128);
+            this.dock_Left.Location = new System.Drawing.Point(0, 195);
+            this.dock_Left.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dock_Left.Name = "dock_Left";
             this.dock_Left.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dock_Left.Size = new System.Drawing.Size(200, 393);
+            this.dock_Left.Size = new System.Drawing.Size(200, 624);
             this.dock_Left.Text = "导航";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(6, 35);
+            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 366);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(185, 583);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // imageList1
@@ -554,14 +557,15 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 552);
+            this.ClientSize = new System.Drawing.Size(1473, 867);
             this.Controls.Add(this.dock_Left);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

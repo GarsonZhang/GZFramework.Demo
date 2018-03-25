@@ -4,7 +4,7 @@
     -- 博客地址:http://www.cnblogs.com/GarsonZhang/
  
 	-- CLR版本： 4.0.30319.42000
-	-- 创建时间：2015-10-26 15:05:22
+	-- 创建时间：2018-03-25 0:07:13
 	-- 创建年月：2015
 **************************************************************************/
 using System;
@@ -15,11 +15,10 @@ using GZFramework.DB.ModelAttribute;
 
 namespace GZFrameworkDemo.Models
 {
-
     /// <summary>
     /// ORM模型, 数据表:dt_CommonDicData
     /// GZFrameworkCodeGenerate代码生成器自动生成
-    /// 时间：2015-10-26 15:05
+    /// 时间：2018-03-25 00:07
     /// </summary>
     [ModelStruct(dt_CommonDicData._TableName)]
     public sealed class dt_CommonDicData
@@ -30,7 +29,13 @@ namespace GZFrameworkDemo.Models
         /// 自增字段
         /// </summary>
         [ModelPrimaryKey]
-        public const string rowid = "rowid";
+        public const string isid = "isid";
+
+        /// <summary>
+        /// rowversion
+        /// </summary>
+        [ModelRowversion]
+        public const string rowversion = "rowversion";
 
         /// <summary>
         /// 字典类型
@@ -81,6 +86,7 @@ namespace GZFrameworkDemo.Models
         public const string LastUpdateDate = "LastUpdateDate";
 
     }
+
 
 
 

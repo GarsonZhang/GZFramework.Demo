@@ -20,5 +20,15 @@ namespace GZFrameworkDemo.Business
                 return _db;
             }
         }
+        private static IDatabase _logindb;
+        public static IDatabase LoginDB
+        {
+            get
+            {
+                if (_logindb == null)
+                    _logindb = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.LoginDBCode);
+                return _logindb;
+            }
+        }
     }
 }

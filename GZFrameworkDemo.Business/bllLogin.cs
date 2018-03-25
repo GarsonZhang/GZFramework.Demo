@@ -71,7 +71,7 @@ namespace GZFrameworkDemo.Business
             SqlParameterProvider p = new SqlParameterProvider();
             p.AddParameter("@Account", SqlDbType.VarChar, 20, User);
             p.AddParameter("@Pwd", SqlDbType.VarChar, 50, Pwd);
-            long v = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.SystemDBCode).ExecuteScalar<long>(sql, p);
+            long v = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.SystemDBCode).ExecuteScalar<int>(sql, p);
             return v > 0;
         }
     }

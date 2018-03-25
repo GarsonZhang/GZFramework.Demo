@@ -91,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RptCommonBase.cs" />
     <Compile Include="RptCommonCustomer.cs" />
+    <Compile Include="RptCommonUnitTable.cs" />
     <Compile Include="RptCommonMainDetailEx.cs" />
     <Compile Include="RptCommonSimple.cs" />
   </ItemGroup>

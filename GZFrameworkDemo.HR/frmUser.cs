@@ -27,8 +27,8 @@ namespace GZFrameworkDemo.HR
         private void frm_Load(object sender, EventArgs e)
         {
             _SummaryView = gvMainData;//必须赋值
-            base.AddControlsOnAddKey();
-
+            base.AddControlsOnAddKey();//只有新增时可编辑/只读
+            //任何状态都不允许编辑/只读
             base.AddControlsOnlyRead(this.txtCreateUser, this.txtCreateDate, this.txtLastUpdateUser, this.txtLastUpdateDate);
         }
         //查询

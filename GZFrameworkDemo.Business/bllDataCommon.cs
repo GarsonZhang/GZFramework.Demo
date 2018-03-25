@@ -109,7 +109,7 @@ namespace GZFrameworkDemo.Business
             //var dbH = DataBaseFactoryEx.CreateDataBase(Loginer.CurrentLoginer.LoginDBCode);
             SqlParameterProvider p = new SqlParameterProvider();
             p.AddParameter("@DataType", SqlDbType.VarChar, 50, E.ToString());
-            return DBServices.DB.GetTable(sql, TableName, p);
+            return DBServices.LoginDB.GetTable(sql, TableName, p);
         }
 
         public DataTable getCompanyInfo()

@@ -418,6 +418,21 @@ namespace GZFrameworkDemo.Main
         {
             List<ModuleModel> lstModule = LoadModuleHelper.Intance.GetModule();
             LoadModule(lstModule);
+            //第一种，简单实现
+            //navBarControl1.ActiveGroup = navBarControl1.Groups[1];
+
+            //第二种，自动型
+            foreach (var pName in Library.DevelopmentEnvironment.lstDLL)
+            {
+                foreach (NavBarGroup group in navBarControl1.Groups)
+                {
+                    if ((group.Tag as GZFramework.UI.Core.Module.ModuleModel).ModuleID == pName)
+                    {
+                        navBarControl1.ActiveGroup = group;
+                        return;
+                    }
+                }
+            }
         }
 
         private void LoadModule(List<ModuleModel> lstModule)
@@ -449,7 +464,9 @@ namespace GZFrameworkDemo.Main
                 item.Caption = fun.Caption;
                 item.Tag = fun.FunctionID;
                 //item.SmallImage = FunSmallImage;
-                item.SmallImage = imageList1.Images["Forward"];
+                //item.SmallImage = imageList1.Images["Forward"];
+                item.SmallImage = Common.ImageLibrary.ResizeImage(fun.FormIcon, 16, 16);
+                //item.SmallImage = Common.ImageLibrary.ResizeImage(fun.LoadFormEx().Icon.ToBitmap(), 16, 16);
 
                 item.LinkClicked += item_LinkClicked;
 
@@ -548,7 +565,9 @@ namespace GZFrameworkDemo.Main
                 frm.Show();
                 frm.Activate();
                 // 设置当前 tab页的 图标,我这里也默认取navBar中的Item中的图标
-                xtraTabbedMdiManager1.Pages[frm].Image = Image.FromHbitmap(frm.Icon.ToBitmap().GetHbitmap());
+                Image img1 = frm.Icon.ToBitmap();
+                Image img2 = Common.ImageLibrary.ResizeImage(img1, 16, 16);
+                xtraTabbedMdiManager1.Pages[frm].Image = img2;
                 WaiteServer.CloseWaite();
                 return frm;
             }

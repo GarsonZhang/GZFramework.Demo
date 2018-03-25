@@ -22,13 +22,28 @@ namespace GZFrameworkDemo.Common
             try
             {
                 Bitmap bmp = new Bitmap(img);
-                bmp.Save(ms, ImageFormat.Bmp);
+                bmp.Save(ms, ImageFormat.Png);
                 byte[] bs = ms.ToArray();
                 ms.Close();
                 return bs;
             }
             catch { ms.Close(); return null; }
         }
+
+
+        /// <summary>
+        /// Convert Byte[] to Image
+        /// </summary>
+        /// <param name="buffer"></param>
+        /// <returns></returns>
+        public static Image ConvertBytesToImage(byte[] buffer)
+        {
+            MemoryStream ms = new MemoryStream(buffer);
+            Image image = System.Drawing.Image.FromStream(ms);
+            return image;
+        }
+
+
         /// <summary>
         /// 按宽度比例缩小图片
         /// </summary>

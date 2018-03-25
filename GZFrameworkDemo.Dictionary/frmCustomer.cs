@@ -6,10 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using GZFrameworkDemo.Business.Business;
 using GZFramework.DB.Lib;
 using GZFramework.UI.Dev.Common;
 using GZFramework.UI.Dev.LibForm;
+using GZFrameworkDemo.Business.Business;
+using GZFramework.UI.Core;
+using GZFrameworkDemo.ReportServer;
+using System.IO;
+using DevExpress.XtraEditors.Repository;
 
 namespace GZFrameworkDemo.Dictionary
 {
@@ -29,18 +33,23 @@ namespace GZFrameworkDemo.Dictionary
             _SummaryView = gvMainData;//必须赋值
             base.AddControlsOnAddKey();
 
-            base.AddControlsOnlyRead(this.txtCustomerCode, this.txtCreateUser, this.txtCreateDate, this.txtLastUpdateUser, this.txtLastUpdateDate);
+            base.AddControlsOnlyRead(this.txtCreateUser, this.txtCreateDate, this.txtLastUpdateUser, this.txtLastUpdateDate);
+            Library.DataBinderTools.Bound.BoundCommonDictDataID(txtStatus, Business.CustomerEnum.EnumCommonDicData.客户状态, false, false);
+            Library.DataBinderTools.Bound.BoundCommonDictDataID(lueStatus, Business.CustomerEnum.EnumCommonDicData.客户状态, false,false);
         }
         //查询
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            Dictionary<string, object> dic = new Dictionary<string, object>();
+            
+            //Dictionary<ing, object> dic = new Dictionary<string, object>();
 
-            if (!String.IsNullOrEmpty(txts_CustomerCode.Text)) dic.Add("@CustomerCode", txts_CustomerCode.Text);
-            if (!String.IsNullOrEmpty(txts_CustomerName.Text)) dic.Add("@CustomerName", txts_CustomerName.Text);
+            //if (!String.IsNullOrEmpty(txts_CustomerID.Text)) dic.Add("@CustomerID", txts_CustomerID.Text);
+            //if (!String.IsNullOrEmpty(txts_CustomerName.Text)) dic.Add("@CustomerName", txts_CustomerName.Text);
+            //if (!String.IsNullOrEmpty(txts_ZJM.Text)) dic.Add("@ZJM", txts_ZJM.Text);
 
 
-            DataTable dt = bll.Search(dic);
+            //DataTable dt = bll.Search(dic);
+            DataTable dt = bll.search(txts_CustomerID.Text, txts_CustomerName.Text, txts_ZJM.Text);
 
             gcMainData.DataSource = dt;
             if (gvMainData.RowCount < 100)//行数过多会很耗时
@@ -57,7 +66,10 @@ namespace GZFrameworkDemo.Dictionary
         protected override bool ValidateBeforSave()
         {
             bool Validate = true
-                       & LibraryTools.IsNotEmpBaseEdit(txtCustomerName, "客户名称不能为空！");
+                       & LibraryTools.IsNotEmpBaseEdit(txtCustomerID, "客户编号不能为空！")
+                       & LibraryTools.IsNotEmpBaseEdit(txtCustomerName, "客户名称不能为空！")
+                       & LibraryTools.IsNotEmpBaseEdit(txtZJM, "助记码不能为空！")
+                       & LibraryTools.IsNotEmpBaseEdit(txtContacts, "联系人不能为空！");
 
             ;
 
@@ -98,7 +110,7 @@ namespace GZFrameworkDemo.Dictionary
         {
             get
             {
-                return base.CustomerAuthority;
+                return base.CustomerAuthority + FunctionAuthorityCommon.PREVIEW;
             }
         }
 
@@ -211,7 +223,16 @@ namespace GZFrameworkDemo.Dictionary
         /// </summary>
         protected override void DoPreview(object sender)
         {
-            base.DoPreview(sender);
+            var data = gcMainData.DataSource as DataTable;
+            if (data == null)
+            {
+                Msg.ShowInformation("打印内容为空！");
+                return;
+            }
+            //rptCustomer
+            string FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reports\\rptCustomer.frx");
+            RptCommonSimple RptHelper = new RptCommonSimple(this, FileName, data);
+            frmRptPreview.ShowForm(RptHelper);
         }
 
         /// <summary>

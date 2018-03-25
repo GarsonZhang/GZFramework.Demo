@@ -4,7 +4,7 @@
     -- 博客地址:http://www.cnblogs.com/GarsonZhang/
  
 	-- CLR版本： 4.0.30319.42000
-	-- 创建时间：2017/5/20 22:53:47
+	-- 创建时间：2018-03-24 19:57:14
 	-- 创建年月：2015
 **************************************************************************/
 using System;
@@ -16,14 +16,14 @@ using GZFramework.DB.ModelAttribute;
 namespace GZFrameworkDemo.Models.Business
 {
     /// <summary>
-    /// ORM模型, 数据表:tb_PO
+    /// ORM模型, 数据表:dt_Data_Customer
     /// GZFrameworkCodeGenerate代码生成器自动生成
-    /// 时间：2017-05-20 22:54
+    /// 时间：2018-03-24 19:57
     /// </summary>
-    [ModelStruct(tb_PO._TableName)]
-    public sealed class tb_PO
+    [ModelStruct(dt_Data_Customer._TableName)]
+    public sealed class dt_Data_Customer
     {
-        public const string _TableName = "tb_PO";
+        public const string _TableName = "dt_Data_Customer";
 
         /// <summary>
         /// 自增列
@@ -31,28 +31,40 @@ namespace GZFrameworkDemo.Models.Business
         public const string isid = "isid";
 
         /// <summary>
-        /// 单据号码
+        /// 客户编号
         /// </summary>
         [ModelPrimaryKey]
-        public const string DocNo = "DocNo";
+        public const string CustomerID = "CustomerID";
 
         /// <summary>
-        /// 单据日期
+        /// 客户名称
         /// </summary>
         [ModelEditField]
-        public const string DocDate = "DocDate";
-        
-        /// <summary>
-        /// 客户
-        /// </summary>
-        [ModelEditField]
-        public const string CustomerCode = "CustomerCode";
+        public const string CustomerName = "CustomerName";
 
         /// <summary>
-        /// 总重量
+        /// 助记码
         /// </summary>
         [ModelEditField]
-        public const string TotalWT = "TotalWT";
+        public const string ZJM = "ZJM";
+
+        /// <summary>
+        /// 客户地址
+        /// </summary>
+        [ModelEditField]
+        public const string CustomerAddress = "CustomerAddress";
+
+        /// <summary>
+        /// 联系人
+        /// </summary>
+        [ModelEditField]
+        public const string Contacts = "Contacts";
+
+        /// <summary>
+        /// 联系电话
+        /// </summary>
+        [ModelEditField]
+        public const string Phone = "Phone";
 
         /// <summary>
         /// 备注
@@ -61,66 +73,10 @@ namespace GZFrameworkDemo.Models.Business
         public const string Remark = "Remark";
 
         /// <summary>
-        /// 创建人
+        /// 状态
         /// </summary>
         [ModelEditField]
-        public const string CreateUser = "CreateUser";
-
-        /// <summary>
-        /// 创建时间
-        /// </summary>
-        [ModelEditField]
-        public const string CreateDate = "CreateDate";
-
-        /// <summary>
-        /// 修改人
-        /// </summary>
-        [ModelEditField]
-        public const string LastUpdateUser = "LastUpdateUser";
-
-        /// <summary>
-        /// 修改时间
-        /// </summary>
-        [ModelEditField]
-        public const string LastUpdateDate = "LastUpdateDate";
-
-    }
-
-
-
-    /// <summary>
-    /// ORM模型, 数据表:tb_PODetail
-    /// GZFrameworkCodeGenerate代码生成器自动生成
-    /// 时间：2017-05-20 22:54
-    /// </summary>
-    [ModelStruct(tb_PODetail._TableName)]
-    public sealed class tb_PODetail
-    {
-        public const string _TableName = "tb_PODetail";
-
-        /// <summary>
-        /// 自增列
-        /// </summary>
-        [ModelPrimaryKey]
-        public const string isid = "isid";
-
-        /// <summary>
-        /// 单据号码
-        /// </summary>
-        [ModelForeignKey]
-        public const string DocNo = "DocNo";
-
-        /// <summary>
-        /// 规格
-        /// </summary>
-        [ModelEditField]
-        public const string WoolSpec = "WoolSpec";
-
-        /// <summary>
-        /// 重量
-        /// </summary>
-        [ModelEditField]
-        public const string WT = "WT";
+        public const string Status = "Status";
 
         /// <summary>
         /// 创建人
@@ -135,13 +91,13 @@ namespace GZFrameworkDemo.Models.Business
         public const string CreateDate = "CreateDate";
 
         /// <summary>
-        /// 修改人
+        /// 最后修改人
         /// </summary>
         [ModelEditField]
         public const string LastUpdateUser = "LastUpdateUser";
 
         /// <summary>
-        /// 修改时间
+        /// 最后修改时间
         /// </summary>
         [ModelEditField]
         public const string LastUpdateDate = "LastUpdateDate";

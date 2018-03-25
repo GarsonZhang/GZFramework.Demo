@@ -63,6 +63,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GZFramework.UI.Dev.Controls\GZFramework.UI.Dev.Controls.csproj">
+      <Project>{f7269578-4807-4b61-b7de-2b82fd45213b}</Project>
+      <Name>GZFramework.UI.Dev.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GZFramework.UI.Dev\GZFramework.UI.Dev.csproj">
       <Project>{5729d5dc-a77a-4218-9aa5-066527399da9}</Project>
       <Name>GZFramework.UI.Dev</Name>

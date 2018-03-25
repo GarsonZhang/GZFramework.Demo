@@ -4,7 +4,7 @@
     -- 博客地址:http://www.cnblogs.com/GarsonZhang/
  
 	-- CLR版本： 4.0.30319.42000
-	-- 创建时间：2017/5/20 22:33:14
+	-- 创建时间：2015-10-26 15:05:22
 	-- 创建年月：2015
 **************************************************************************/
 using System;
@@ -13,52 +13,48 @@ using System.Linq;
 using System.Text;
 using GZFramework.DB.ModelAttribute;
 
-namespace GZFrameworkDemo.Models.Business
+namespace GZFrameworkDemo.Models
 {
+
     /// <summary>
-    /// ORM模型, 数据表:tb_Customer
+    /// ORM模型, 数据表:dt_CommonDicData
     /// GZFrameworkCodeGenerate代码生成器自动生成
-    /// 时间：2017-05-20 22:33
+    /// 时间：2015-10-26 15:05
     /// </summary>
-    [ModelStruct(tb_Customer._TableName)]
-    public sealed class tb_Customer
+    [ModelStruct(_dt_CommonDicData._TableName)]
+    public sealed class _dt_CommonDicData
     {
-        public const string _TableName = "tb_Customer";
+        public const string _TableName = "dt_CommonDicData";
 
         /// <summary>
-        /// 自增列
-        /// </summary>
-        public const string isid = "isid";
-
-        /// <summary>
-        /// 客户编号
+        /// 自增字段
         /// </summary>
         [ModelPrimaryKey]
-        public const string CustomerCode = "CustomerCode";
+        public const string rowid = "rowid";
 
         /// <summary>
-        /// 客户名称
+        /// 字典类型
         /// </summary>
         [ModelEditField]
-        public const string CustomerName = "CustomerName";
+        public const string DataType = "DataType";
 
         /// <summary>
-        /// 客户地址
+        /// 数据编码
         /// </summary>
         [ModelEditField]
-        public const string CustomerAddress = "CustomerAddress";
+        public const string DataCode = "DataCode";
 
         /// <summary>
-        /// 联系人
+        /// 数据名称
         /// </summary>
         [ModelEditField]
-        public const string Contact = "Contact";
+        public const string DataName = "DataName";
 
         /// <summary>
-        /// 联系电话
+        /// 显示索引
         /// </summary>
         [ModelEditField]
-        public const string ContactPhone = "ContactPhone";
+        public const string SortIndex = "SortIndex";
 
         /// <summary>
         /// 创建人
@@ -67,7 +63,7 @@ namespace GZFrameworkDemo.Models.Business
         public const string CreateUser = "CreateUser";
 
         /// <summary>
-        /// 创建时间
+        /// 创建日期
         /// </summary>
         [ModelEditField]
         public const string CreateDate = "CreateDate";
@@ -79,13 +75,12 @@ namespace GZFrameworkDemo.Models.Business
         public const string LastUpdateUser = "LastUpdateUser";
 
         /// <summary>
-        /// 修改时间
+        /// 修改日期
         /// </summary>
         [ModelEditField]
         public const string LastUpdateDate = "LastUpdateDate";
 
     }
-
 
 
 

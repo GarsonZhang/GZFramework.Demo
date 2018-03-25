@@ -90,7 +90,7 @@
     <Compile Include="frmCommonDataDictNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCommonDataDictNew.Designer.cs">
+    <Compile Include="frmCommonDataDictNew.designer.cs">
       <DependentUpon>frmCommonDataDictNew.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustomer.cs">
@@ -133,6 +133,10 @@
     <ProjectReference Include="..\GZFramework.UI.Dev\GZFramework.UI.Dev.csproj">
       <Project>{5729d5dc-a77a-4218-9aa5-066527399da9}</Project>
       <Name>GZFramework.UI.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GZFrameworkDemo.ReportServer\GZFrameworkDemo.ReportServer.csproj">
+      <Project>{48991a79-2c4e-4080-9f79-cbd9118fe869}</Project>
+      <Name>GZFrameworkDemo.ReportServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\GZFramework\GZFramework.DB\GZFramework.DB.csproj">
       <Project>{3986c490-ccd4-4328-b96b-1fba69cb7238}</Project>

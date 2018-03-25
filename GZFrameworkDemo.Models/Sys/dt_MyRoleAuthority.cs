@@ -17,7 +17,7 @@ namespace GZFrameworkDemo.Models
 
 
         [ModelPrimaryKey]
-        public const string RowID = "RowID";
+        public const string isid = "isid";
 
         /// <summary>
         /// ½ÇÉ«±àºÅ

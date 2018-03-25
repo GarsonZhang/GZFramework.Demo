@@ -62,18 +62,21 @@
             this.groupControl1.Controls.Add(this.gc_DataType);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(212, 623);
+            this.groupControl1.Size = new System.Drawing.Size(303, 979);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "字典类型";
             // 
             // gc_DataType
             // 
             this.gc_DataType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gc_DataType.Location = new System.Drawing.Point(2, 22);
+            this.gc_DataType.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gc_DataType.Location = new System.Drawing.Point(3, 33);
             this.gc_DataType.MainView = this.gv_DataType;
+            this.gc_DataType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gc_DataType.Name = "gc_DataType";
-            this.gc_DataType.Size = new System.Drawing.Size(208, 599);
+            this.gc_DataType.Size = new System.Drawing.Size(297, 943);
             this.gc_DataType.TabIndex = 0;
             this.gc_DataType.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_DataType});
@@ -103,9 +106,10 @@
             // 
             this.groupControl2.Controls.Add(this.gc_DataDetail);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(217, 0);
+            this.groupControl2.Location = new System.Drawing.Point(311, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(493, 623);
+            this.groupControl2.Size = new System.Drawing.Size(704, 979);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "数据详情";
             // 
@@ -128,14 +132,16 @@
             this.gc_DataDetail.EmbeddedNavigator.Buttons.Prev.ImageIndex = 6;
             this.gc_DataDetail.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
             this.gc_DataDetail.EmbeddedNavigator.Buttons.Remove.ImageIndex = 2;
+            this.gc_DataDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gc_DataDetail.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.None;
             this.gc_DataDetail.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gc_DataDetail_EmbeddedNavigator_ButtonClick);
-            this.gc_DataDetail.Location = new System.Drawing.Point(2, 22);
+            this.gc_DataDetail.Location = new System.Drawing.Point(3, 33);
             this.gc_DataDetail.MainView = this.gv_DataDetail;
+            this.gc_DataDetail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gc_DataDetail.Name = "gc_DataDetail";
             this.gc_DataDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lue_UserName});
-            this.gc_DataDetail.Size = new System.Drawing.Size(489, 599);
+            this.gc_DataDetail.Size = new System.Drawing.Size(698, 943);
             this.gc_DataDetail.TabIndex = 0;
             this.gc_DataDetail.UseEmbeddedNavigator = true;
             this.gc_DataDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -176,6 +182,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 164;
             // 
             // gridColumn3
             // 
@@ -244,20 +251,22 @@
             // 
             // splitterControl1
             // 
-            this.splitterControl1.Location = new System.Drawing.Point(212, 0);
+            this.splitterControl1.Location = new System.Drawing.Point(303, 0);
+            this.splitterControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(5, 623);
+            this.splitterControl1.Size = new System.Drawing.Size(8, 979);
             this.splitterControl1.TabIndex = 1;
             this.splitterControl1.TabStop = false;
             // 
             // frmCommonDataDictNew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 623);
+            this.ClientSize = new System.Drawing.Size(1347, 979);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.splitterControl1);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(13, 20, 13, 20);
             this.Name = "frmCommonDataDictNew";
             this.Text = "基础字典管理";
             this.Load += new System.EventHandler(this.frmCommonDataDictNew_Load);

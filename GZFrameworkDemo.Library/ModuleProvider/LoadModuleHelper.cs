@@ -12,6 +12,7 @@ using GZFrameworkDemo.Business;
 using GZFrameworkDemo.Common;
 using GZFramework.UI.Dev.Module;
 using GZFramework.UI.Core.Module;
+using System.Drawing;
 
 namespace GZFrameworkDemo.Library.ModuleProvider
 {
@@ -132,6 +133,9 @@ namespace GZFrameworkDemo.Library.ModuleProvider
                     {
                         fun.FunctionName = ConvertLib.ToString(drFun[sys_ModulesFunction.FunctionName]);
                         fun.Sort = ConvertLib.ToInt(drFun[sys_ModulesFunction.Sort]);
+                        byte[] imgByte = drFun[sys_ModulesFunction.Image] as byte[];
+                        if (imgByte != null && imgByte.Length > 0)
+                            fun.FormIcon = Common.ImageLibrary.ConvertBytesToImage(imgByte);
                         fun.IsNew = false;
                     }
 
@@ -181,6 +185,9 @@ namespace GZFrameworkDemo.Library.ModuleProvider
                     fun.UserAuthority = ConvertLib.ToInt(row["UserAuthority"]);
                     fun.FunctionName = ConvertLib.ToString(row[sys_ModulesFunction.FunctionName]);
                     fun.Sort = ConvertLib.ToInt(row[sys_ModulesFunction.Sort]);
+                    byte[] imgByte = row[sys_ModulesFunction.Image] as byte[];
+                    if (imgByte != null && imgByte.Length > 0)
+                        fun.FormIcon = Common.ImageLibrary.ConvertBytesToImage(imgByte);
                     if (fun == null) continue;
                     module.functions.Add(fun);
                 }

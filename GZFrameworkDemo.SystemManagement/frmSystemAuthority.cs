@@ -62,12 +62,12 @@ namespace GZFrameworkDemo.SystemManagement
             dt.Columns.Add("Authority", typeof(System.Int32));
             dt.Columns.Add("ModuleSort", typeof(System.Int32));
             dt.Columns.Add("FunctionSort", typeof(System.Int32));
-
+            dt.Columns.Add("Image", typeof(byte[]));
             dt.DefaultView.Sort = "ModuleSort,FunctionSort";
             DataSource = dt;
         }
 
-        void AddRow(string Key, string ParentKey, string DisplayName, string Name, int Type, int Authority, int ModuleSort, int FunctionSort)
+        DataRow AddRow(string Key, string ParentKey, string DisplayName, string Name, int Type, int Authority, int ModuleSort, int FunctionSort)
         {
             DataRow row = DataSource.Rows.Add();
             row["PKey"] = Key;
@@ -78,6 +78,7 @@ namespace GZFrameworkDemo.SystemManagement
             row["Authority"] = Authority;
             row["ModuleSort"] = ModuleSort;
             row["FunctionSort"] = FunctionSort;
+            return row;
         }
 
         private void btn_Load_Click(object sender, EventArgs e)
@@ -98,10 +99,13 @@ namespace GZFrameworkDemo.SystemManagement
                     foreach (var fun in m.functions)
                     {
                         FunctionIndex++;
-                        this.AddRow(fun.FunctionID, m.ModuleID, fun.Caption, fun.FunctionName, 2, 0, ModuleIndex, FunctionIndex);
+                        DataRow row = this.AddRow(fun.FunctionID, m.ModuleID, fun.Caption, fun.FunctionName, 2, 0, ModuleIndex, FunctionIndex);
 
-                        fun.UserAuthority = GZFramework.UI.Core.FunctionAuthority.All;
                         Form form = fun.LoadFormEx();
+                        Image img = form.Icon.ToBitmap();
+                        row["image"] = Common.ImageLibrary.ConvertImage2Bytes(img);
+                        fun.UserAuthority = GZFramework.UI.Core.FunctionAuthority.All;
+
                         if (form is GZFramework.UI.Dev.LibForm.frmBaseChild)
                         {
                             (form as GZFramework.UI.Dev.LibForm.frmBaseChild).InitialForm();
@@ -158,6 +162,7 @@ namespace GZFrameworkDemo.SystemManagement
                         drfun[sys_ModulesFunction.ModuleID] = rowModule["PKey"];
                         drfun[sys_ModulesFunction.FunctionID] = rowFun["PKey"];
                         drfun[sys_ModulesFunction.FunctionName] = rowFun["Name"];
+                        drfun[sys_ModulesFunction.Image]= rowFun["Image"];
                         drfun[sys_ModulesFunction.Sort] = FunIndex;
 
                         //权限
@@ -188,7 +193,7 @@ namespace GZFrameworkDemo.SystemManagement
                 Msg.ShowInformation("提交成功！");
                 btn_Load.PerformClick();
             }
-            
+
         }
     }
 }
