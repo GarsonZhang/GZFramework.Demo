@@ -28,34 +28,79 @@ namespace GZFrameworkDemo.Business
                 string sql = "SELECT IsSysAdmain FROM dt_MyUser WHERE Account=@Account";
 
                 string isAdmin = db.ExecuteScalar<string>(sql, p1);
+
+                string sqlAllModuleFunction = "SELECT * FROM sys_Modules ORDER BY Sort;" +
+                                "SELECT *,0 AS UserAuthority FROM sys_ModulesFunction ORDER BY Sort ";
+                ds = dal.DBHelper.GetDataSet(sqlAllModuleFunction, null);
+
+
                 if ("Y".Equals(isAdmin))
                 {
-                    string sql2 = "SELECT * FROM sys_Modules ORDER BY Sort;" +
-                                "SELECT *,1073741823 AS UserAuthority FROM sys_ModulesFunction ORDER BY Sort ";
-                    ds = dal.DBHelper.GetDataSet(sql2, null);
+                    foreach (DataRow dr in ds.Tables[1].Rows)
+                    {
+                        dr["UserAuthority"] = 1073741823;
+                    }
+                    return;
                 }
                 else
                 {
-                    string sql2 = @"SELECT * FROM sys_Modules ORDER BY Sort;
-                                SELECT *,0 AS UserAuthority FROM sys_ModulesFunction ORDER BY Sort;
-                                SELECT * FROM dt_MyRoleAuthority 
-                                WHERE RoleID IN(
-                                    SELECT RoleID FROM dt_MyUserRole WHERE Account = @Account
-                                )";
-                    ds = dal.DBHelper.GetDataSet(sql2, p1);
+                    DataTable dtAuthority = null;
 
+                    string sqlDBAdmin = "SELECT IsDbAdmin FROM dbo.dt_MyUserDBs WHERE Account=@Account AND DBCode=@DBCode";
+                    SqlParameterProvider pDBAdmin = new SqlParameterProvider();
+                    pDBAdmin.AddParameter("@Account", SqlDbType.VarChar, 20, Account);
+                    pDBAdmin.AddParameter("@DBCode", SqlDbType.VarChar, 20, Loginer.CurrentLoginer.LoginDBCode);
+                    string isDBAdmin = db.ExecuteScalar<string>(sqlDBAdmin, pDBAdmin);
+
+
+                    if ("Y".Equals(isDBAdmin))
+                    {
+                        string sql2 = "SELECT FunctionID,Authority FROM dbo.sys_DataBaseListAuthority where DBCode=@DBCode";
+                        SqlParameterProvider p3 = new SqlParameterProvider();
+                        p3.AddParameter("@DBCode", SqlDbType.VarChar, 20, Loginer.CurrentLoginer.LoginDBCode);
+                        dtAuthority = db.GetTable(sql2, "tmp", p3);
+                    }
+                    else
+                    {
+
+                        string sql2 = @"SELECT B.FunctionID,
+                                               A.Authority & B.Authority AS Authority
+                                        FROM
+                                        (
+                                            SELECT FunctionID,
+                                                   Authority
+                                            FROM dt_MyRoleAuthority
+                                            WHERE RoleID IN (
+                                                                SELECT RoleID FROM dt_MyUserRole WHERE Account = @Account
+                                                            )
+                                        ) AS A
+                                            INNER JOIN
+                                            (
+                                                SELECT FunctionID,
+                                                       Authority
+                                                FROM dbo.sys_DataBaseListAuthority
+                                                WHERE DBCode = @DBCode
+                                            ) AS B
+                                                ON A.FunctionID = B.FunctionID;";
+                        SqlParameterProvider p3 = new SqlParameterProvider();
+                        p3.AddParameter("@Account", SqlDbType.VarChar, 20, Account);
+                        p3.AddParameter("@DBCode", SqlDbType.VarChar, 20, Loginer.CurrentLoginer.LoginDBCode);
+                        dtAuthority = db.GetTable(sql2, "tmp", p3);
+                    }
                     //获得总权限，
-                    DataTable dtAuthority = ds.Tables[2];
-                    var query = from t in dtAuthority.AsEnumerable()
-                                group t by new { FunctionID = t.Field<string>("FunctionID") } into m
-                                select new
-                                {
-                                    FunctionID = m.Key.FunctionID,
-                                    Authority = m.Aggregate(0, (d, n) =>
-                                    {
-                                        return d | Common.ConvertLib.ToInt(n["Authority"]);
-                                    })
-                                };
+                    //DataTable dtAuthority = ds.Tables[2];
+                    var query = (from t in dtAuthority.AsEnumerable()
+                                 group t by new { FunctionID = t.Field<string>("FunctionID") } into m
+                                 select new
+                                 {
+                                     FunctionID = m.Key.FunctionID,
+                                     Authority = m.Aggregate(0, (d, n) =>
+                                     {
+                                         return d | Common.ConvertLib.ToInt(n["Authority"]);
+                                     })
+                                 }).ToList();
+
+
 
                     query.ToList().ForEach(p =>
                     {
@@ -82,7 +127,7 @@ namespace GZFrameworkDemo.Business
                     {
                         ds.Tables[0].Rows.Remove(r.row);
                     });
-                    ds.Tables.RemoveAt(2);
+                    //ds.Tables.RemoveAt(2);
                     ds.AcceptChanges();
                 }
             });

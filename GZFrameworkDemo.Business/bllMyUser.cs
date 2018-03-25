@@ -10,7 +10,7 @@ namespace GZFrameworkDemo.Business
     public class bllMyUser : bllBase
     {
         public bllMyUser()
-            : base(typeof(dt_MyUser), typeof(dt_MyUserRole))
+            : base(typeof(dt_MyUser), typeof(dt_MyUserDBs), typeof(dt_MyUserRole))
         {
             DBCode = Loginer.CurrentLoginer.SystemDBCode;
         }
@@ -30,7 +30,7 @@ namespace GZFrameworkDemo.Business
         {
             if (String.IsNullOrEmpty(RoleIDs)) return null;
             //string sql = "SELECT FunctionID,BinaryOrOperation(Authority) as Authority FROM dt_MyRoleAuthority  WHERE RoleID IN ("+ RoleIDs + "))  GROUP BY FunctionID";
-            string sql = "SELECT FunctionID,Authority as Authority FROM dt_MyRoleAuthority  WHERE RoleID IN (" + RoleIDs + ")  GROUP BY FunctionID";
+            string sql = "SELECT FunctionID,Authority as Authority FROM dt_MyRoleAuthority  WHERE RoleID IN (" + RoleIDs + ")";
 
             DataTable dt = dal.DBHelper.GetTable(sql, "tmp", null);
 

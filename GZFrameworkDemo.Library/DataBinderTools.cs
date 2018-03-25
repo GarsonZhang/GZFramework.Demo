@@ -46,6 +46,29 @@ namespace GZFrameworkDemo.Library
             }
 
             /// <summary>
+            /// 绑定账套
+            /// </summary>
+            /// <param name="lue"></param>
+            /// <param name="displayCombination"></param>
+            /// <param name="AddNull"></param>
+            public static void BoundDBList(RepositoryItemLookUpEdit lue, bool displayCombination, bool AddNull)
+            {
+                lue.Columns.Clear();
+                InitializeControl(lue, new string[] { "账套编号", "账套名称" }, new string[] { sys_DataBaseList.DBCode, sys_DataBaseList.DBDisplayText });
+
+                BoundDatabase(lue, DataCache.Cache.dtDBList, displayCombination, AddNull, sys_DataBaseList.DBDisplayText, sys_DataBaseList.DBCode);
+            }
+            /// <summary>
+            /// 绑定账套
+            /// </summary>
+            /// <param name="lue"></param>
+            /// <param name="displayCombination"></param>
+            /// <param name="AddNull"></param>
+            public static void BoundDBList(LookUpEdit lue, bool displayCombination, bool AddNull)
+            {
+                BoundDBList(lue.Properties, displayCombination, AddNull);
+            }
+            /// <summary>
             /// 绑定年，指定前后年数
             /// </summary>
             /// <param name="cmb"></param>

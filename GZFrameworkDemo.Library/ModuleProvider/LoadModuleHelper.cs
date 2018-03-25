@@ -175,6 +175,7 @@ namespace GZFrameworkDemo.Library.ModuleProvider
                     ModuleName = dr[sys_Modules.ModuleName] + "",
                     ModuleID = m.ModuleID,
                     Sort = ConvertLib.ToInt(dr[sys_Modules.Sort]),
+                    IsNew=false,
                     ModuleMainType = (m is Form) ? m.GetType() : null
                 };
 
@@ -185,6 +186,7 @@ namespace GZFrameworkDemo.Library.ModuleProvider
                     fun.UserAuthority = ConvertLib.ToInt(row["UserAuthority"]);
                     fun.FunctionName = ConvertLib.ToString(row[sys_ModulesFunction.FunctionName]);
                     fun.Sort = ConvertLib.ToInt(row[sys_ModulesFunction.Sort]);
+                    fun.IsNew = false;
                     byte[] imgByte = row[sys_ModulesFunction.Image] as byte[];
                     if (imgByte != null && imgByte.Length > 0)
                         fun.FormIcon = Common.ImageLibrary.ConvertBytesToImage(imgByte);

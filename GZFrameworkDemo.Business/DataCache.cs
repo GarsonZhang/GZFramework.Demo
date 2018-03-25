@@ -36,6 +36,8 @@ namespace GZFrameworkDemo.Business
 
         private static DataCache _Cache = null;
 
+      
+
         /// <summary>
         /// 缓存数据唯一实例
         /// </summary>
@@ -45,6 +47,24 @@ namespace GZFrameworkDemo.Business
             {
                 if (_Cache == null) _Cache = new DataCache();
                 return _Cache;
+            }
+        }
+
+        /// <summary>
+        /// 账套数据
+        /// </summary>
+        public DataTable dtDBList
+        {
+            get
+            {
+                DataTable dt = CommonData.FindFromCache(sys_DataBaseList._TableName);
+                if (dt == null)
+                {
+                    dt = new bllDataBaseList().GetDBList();
+                    dt.TableName = sys_DataBaseList._TableName;
+                    AddToCache(dt.Copy());
+                }
+                return dt;
             }
         }
 

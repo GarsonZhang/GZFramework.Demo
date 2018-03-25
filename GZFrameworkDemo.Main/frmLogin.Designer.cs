@@ -37,10 +37,10 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Error = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txt_DataBaseList = new DevExpress.XtraEditors.LookUpEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Pwd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_User.Properties)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,56 +52,64 @@
             // chk_Accound
             // 
             this.chk_Accound.AutoSize = true;
-            this.chk_Accound.Location = new System.Drawing.Point(258, 112);
+            this.chk_Accound.Location = new System.Drawing.Point(369, 176);
+            this.chk_Accound.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chk_Accound.Name = "chk_Accound";
-            this.chk_Accound.Size = new System.Drawing.Size(74, 18);
-            this.chk_Accound.TabIndex = 2;
+            this.chk_Accound.Size = new System.Drawing.Size(108, 26);
+            this.chk_Accound.TabIndex = 3;
             this.chk_Accound.Text = "记住账号";
             this.chk_Accound.UseVisualStyleBackColor = true;
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(258, 136);
+            this.btn_Login.Location = new System.Drawing.Point(369, 214);
+            this.btn_Login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(87, 43);
-            this.btn_Login.TabIndex = 3;
+            this.btn_Login.Size = new System.Drawing.Size(124, 68);
+            this.btn_Login.TabIndex = 4;
             this.btn_Login.Text = "登陆";
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // txt_Pwd
             // 
-            this.txt_Pwd.Location = new System.Drawing.Point(258, 80);
+            this.txt_Pwd.Location = new System.Drawing.Point(369, 126);
+            this.txt_Pwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Pwd.Name = "txt_Pwd";
             this.txt_Pwd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txt_Pwd.Properties.Appearance.Options.UseFont = true;
             this.txt_Pwd.Properties.PasswordChar = '*';
-            this.txt_Pwd.Size = new System.Drawing.Size(175, 26);
-            this.txt_Pwd.TabIndex = 1;
+            this.txt_Pwd.Size = new System.Drawing.Size(250, 36);
+            this.txt_Pwd.TabIndex = 2;
             // 
             // txt_User
             // 
-            this.txt_User.Location = new System.Drawing.Point(258, 46);
+            this.txt_User.Location = new System.Drawing.Point(369, 72);
+            this.txt_User.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_User.Name = "txt_User";
             this.txt_User.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txt_User.Properties.Appearance.Options.UseFont = true;
-            this.txt_User.Size = new System.Drawing.Size(175, 26);
-            this.txt_User.TabIndex = 0;
+            this.txt_User.Size = new System.Drawing.Size(250, 36);
+            this.txt_User.TabIndex = 1;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl2.Location = new System.Drawing.Point(205, 83);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(293, 130);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(47, 19);
+            this.labelControl2.Size = new System.Drawing.Size(72, 29);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "密   码";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl1.Location = new System.Drawing.Point(204, 49);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(291, 77);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 19);
+            this.labelControl1.Size = new System.Drawing.Size(72, 29);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "用户名";
             // 
@@ -109,9 +117,10 @@
             // 
             this.txt_Error.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txt_Error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txt_Error.Location = new System.Drawing.Point(206, 188);
+            this.txt_Error.Location = new System.Drawing.Point(294, 295);
+            this.txt_Error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_Error.Name = "txt_Error";
-            this.txt_Error.Size = new System.Drawing.Size(227, 36);
+            this.txt_Error.Size = new System.Drawing.Size(324, 57);
             this.txt_Error.TabIndex = 10;
             this.txt_Error.Text = "用户名或密码不正确！！";
             this.txt_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,23 +140,37 @@
             this.panel1.Controls.Add(this.btn_Login);
             this.panel1.Controls.Add(this.txt_Pwd);
             this.panel1.Controls.Add(this.txt_DataBaseList);
-            this.panel1.Location = new System.Drawing.Point(99, 129);
+            this.panel1.Location = new System.Drawing.Point(141, 203);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 238);
+            this.panel1.Size = new System.Drawing.Size(646, 373);
             this.panel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::GZFrameworkDemo.Main.Properties.Resources.full;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(4, 27);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 250);
+            this.panel2.TabIndex = 11;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl3.Location = new System.Drawing.Point(206, 17);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(294, 27);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(32, 19);
+            this.labelControl3.Size = new System.Drawing.Size(48, 29);
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "账套";
             // 
             // txt_DataBaseList
             // 
-            this.txt_DataBaseList.Location = new System.Drawing.Point(258, 14);
+            this.txt_DataBaseList.Location = new System.Drawing.Point(369, 22);
+            this.txt_DataBaseList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_DataBaseList.Name = "txt_DataBaseList";
             this.txt_DataBaseList.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txt_DataBaseList.Properties.Appearance.Options.UseFont = true;
@@ -160,7 +183,7 @@
             this.txt_DataBaseList.Properties.ShowFooter = false;
             this.txt_DataBaseList.Properties.ShowHeader = false;
             this.txt_DataBaseList.Properties.ValueMember = "DBCode";
-            this.txt_DataBaseList.Size = new System.Drawing.Size(175, 26);
+            this.txt_DataBaseList.Size = new System.Drawing.Size(250, 36);
             this.txt_DataBaseList.TabIndex = 0;
             // 
             // panelControl1
@@ -168,27 +191,20 @@
             this.panelControl1.Controls.Add(this.panel1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(693, 541);
+            this.panelControl1.Size = new System.Drawing.Size(990, 850);
             this.panelControl1.TabIndex = 12;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::GZFrameworkDemo.Main.Properties.Resources.full;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(3, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(189, 159);
-            this.panel2.TabIndex = 11;
             // 
             // frmLogin
             // 
             this.AcceptButton = this.btn_Login;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 541);
+            this.ClientSize = new System.Drawing.Size(990, 850);
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "frmLogin";
             this.Text = "登陆";
             this.Load += new System.EventHandler(this.frmLogin_Load);

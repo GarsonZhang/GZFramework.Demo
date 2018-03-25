@@ -32,14 +32,16 @@ namespace GZFrameworkDemo.SystemManagement
         }
 
         DataTable dtRoles;
-
+        DataTable dtDBList;
         private void frm_Load(object sender, EventArgs e)
         {
             _SummaryView = gvMainData;//必须赋值
             base.AddControlsOnAddKey(txtAccount);
             dtRoles = bll.GetRoleList();
+            dtDBList = DataCache.Cache.dtDBList.Copy();
             base.AddControlsOnlyRead(txtCreateUser, txtCreateDate, txtLastUpdateUser, txtLastUpdateDate);
 
+            DataBinderTools.Bound.BoundDBList(lue_DBList, false, false);
             DataBinderTools.Bound.BoundUserName(txtCreateUser, txtLastUpdateUser);
             DataBinderTools.Bound.BoundUserName(lue_UserName);
             DataBinderTools.Bound.BoundRoleID(lue_RoleName, false, false);
@@ -78,32 +80,31 @@ namespace GZFrameworkDemo.SystemManagement
         {
             bool Validate = true
                        & LibraryTools.IsNotEmpBaseEdit(txtAccount, "账号不能为空！")
-                       & LibraryTools.IsNotEmpBaseEdit(txtPassword, "密码不能为空！")
-                       & LibraryTools.IsNotEmpBaseEdit(txxtPassword, "确认密码不能为空！")
                        & LibraryTools.IsNotEmpBaseEdit(txtUserName, "名称不能为空！");
-            if (Validate == true)
+            if (Validate == false) return false;
+
+            //密码字段加密
+            DataRow row = EditData.Tables[_bll.SummaryModel.TableName].Rows[0];
+
+            if (row.HasVersion(DataRowVersion.Proposed))//只有修改之后的密码字段才进行加密
             {
+                //修改过密码字段
+                Validate = Validate & LibraryTools.IsNotEmpBaseEdit(txtPassword, "密码不能为空！")
+                   & LibraryTools.IsNotEmpBaseEdit(txxtPassword, "确认密码不能为空！");
+                if (Validate == false) return false;
+
                 if (!Object.Equals(txtPassword.EditValue, txxtPassword.EditValue))
                 {
                     Msg.Warning("两次密码输入不一致，请重新输入！");
-                    Validate = false;
+                    return false;
                 }
-            }
-            if (Validate == true)
-            {
-                //密码字段加密
-                DataRow row = EditData.Tables[_bll.SummaryModel.TableName].Rows[0];
-
-                if (row.HasVersion(DataRowVersion.Proposed))//只有修改之后的密码字段才进行加密
+                if (!object.ReferenceEquals(row[dt_MyUser.Password, DataRowVersion.Current], row[dt_MyUser.Password, DataRowVersion.Proposed]))
                 {
-                    if (!object.ReferenceEquals(row[dt_MyUser.Password, DataRowVersion.Current], row[dt_MyUser.Password, DataRowVersion.Proposed]))
-                    {
-                        row[dt_MyUser.Password] = Encrypt.DESEncrypt(row[dt_MyUser.Password].ToString());
-                    }
+                    row[dt_MyUser.Password] = Encrypt.DESEncrypt(row[dt_MyUser.Password].ToString());
                 }
-                txxtPassword.EditValue = EditData.Tables[_bll.SummaryModel.TableName].Rows[0][dt_MyUser.Password];
             }
-            return Validate;
+            txxtPassword.EditValue = EditData.Tables[_bll.SummaryModel.TableName].Rows[0][dt_MyUser.Password];
+            return true;
         }
 
 
@@ -112,6 +113,7 @@ namespace GZFrameworkDemo.SystemManagement
         public override void DoBoundEditData()
         {
             base.DoBoundEditData();
+            gc_DBList.DataSource = EditData.Tables[dt_MyUserDBs._TableName];
             gc_Detail.DataSource = EditData.Tables[dt_MyUserRole._TableName];
             //其他绑定
             //LibraryTools.DoBindingEditorPanel(pan_Summary, EditData.Tables[_bll.SummaryTableName], "txt");
@@ -182,6 +184,7 @@ namespace GZFrameworkDemo.SystemManagement
         protected override void DoView(object sender)
         {
             base.DoView(sender);
+            layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
 
         /// <summary>
@@ -198,6 +201,7 @@ namespace GZFrameworkDemo.SystemManagement
         protected override void DoAdd(object sender)
         {
             base.DoAdd(sender);
+            layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
         }
 
         /// <summary>
@@ -214,6 +218,7 @@ namespace GZFrameworkDemo.SystemManagement
         protected override void DoEdit(object sender)
         {
             base.DoEdit(sender);
+            layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
 
         /// <summary>
@@ -312,7 +317,7 @@ namespace GZFrameworkDemo.SystemManagement
             string RoleIDs = EditData.Tables[dt_MyUserRole._TableName].FormatInValue(dt_MyUserRole.RoleID);
             DataTable dt = bll.GetRolesAuthority(RoleIDs);
             tree_ModuleEx.EditData = dt;
-           
+
         }
 
         private void tree_Module_NodesReloaded(object sender, EventArgs e)
@@ -325,10 +330,44 @@ namespace GZFrameworkDemo.SystemManagement
 
         }
 
+        private void txtPassword_EditValueChanged(object sender, EventArgs e)
+        {
+            if (layoutControlItem1.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never)
+                layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
 
+        }
 
+        private void gc_DBList_EmbeddedNavigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
+        {
+            //frmDialog_DBList
+            if (e.Button.ButtonType == NavigatorButtonType.Remove)
+            {
+                if (Msg.AskQuestion("确定要删除选中账套吗？"))
+                {
+                    gv_DBList.DeleteSelectedRows();
+                }
 
+            }
+            if (e.Button.ButtonType == NavigatorButtonType.Append)
+            {
+                //添加角色
+                //frmDialog_RoleList
+                DataTable dtdetail = EditData.Tables[dt_MyUserDBs._TableName];
+                var str = dtdetail.FormatInValue(dt_MyUserDBs.DBCode);
+                dtDBList.DefaultView.RowFilter = String.IsNullOrEmpty(str) ? "" : String.Format("{0} NOT IN ({1})", sys_DataBaseList.DBCode, str);
+                DataTable dt = frmDialog_DBList.ShowForm(dtDBList.DefaultView.ToTable());
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        DataRow row = EditData.Tables[dt_MyUserDBs._TableName].Rows.Add();
+                        row[dt_MyUserDBs.Account] = txtAccount.EditValue;
+                        row[dt_MyUserDBs.DBCode] = dr[sys_DataBaseList.DBCode];
+                    }
+                }
 
-
+            }
+            e.Handled = true;
+        }
     }
 }

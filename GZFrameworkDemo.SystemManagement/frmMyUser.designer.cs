@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMyUser));
             this.txtAccount = new DevExpress.XtraEditors.TextEdit();
             this.LC_Edit = new DevExpress.XtraLayout.LayoutControl();
@@ -85,14 +86,22 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.gc_Detail = new DevExpress.XtraGrid.GridControl();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gv_Detail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lue_RoleName = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tree_ModuleEx = new GZFrameworkDemo.Library.MyControl.ucModuleTreeList();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gc_DBList = new DevExpress.XtraGrid.GridControl();
+            this.gv_DBList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lue_DBList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.splitterControl1 = new DevExpress.XtraEditors.SplitterControl();
             this.pan_Summary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -151,37 +160,55 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_Detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_RoleName)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tree_ModuleEx)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_DBList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_DBList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_DBList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // pan_Summary
             // 
             this.pan_Summary.Controls.Add(this.panel1);
             this.pan_Summary.Controls.Add(this.LC_Edit);
+            this.pan_Summary.Size = new System.Drawing.Size(1357, 923);
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.btn_Clear);
             this.panelControl1.Controls.Add(this.btn_Search);
             this.panelControl1.Controls.Add(this.LC_Search);
-            this.panelControl1.Size = new System.Drawing.Size(951, 74);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.panelControl1.Size = new System.Drawing.Size(1357, 116);
             // 
             // tp_Search
             // 
             this.tp_Search.Appearance.PageClient.BackColor = System.Drawing.Color.DarkRed;
             this.tp_Search.Appearance.PageClient.Options.UseBackColor = true;
             this.tp_Search.Controls.Add(this.gcMainData);
+            this.tp_Search.Margin = new System.Windows.Forms.Padding(9, 13, 9, 13);
+            this.tp_Search.Size = new System.Drawing.Size(1357, 923);
             this.tp_Search.Controls.SetChildIndex(this.panelControl1, 0);
             this.tp_Search.Controls.SetChildIndex(this.gcMainData, 0);
             // 
+            // tp_Edit
+            // 
+            this.tp_Edit.Margin = new System.Windows.Forms.Padding(9, 13, 9, 13);
+            this.tp_Edit.Size = new System.Drawing.Size(1357, 923);
+            // 
+            // tc_Data
+            // 
+            this.tc_Data.SelectedTabPage = this.tp_Search;
+            // 
             // txtAccount
             // 
-            this.txtAccount.Location = new System.Drawing.Point(79, 12);
+            this.txtAccount.Location = new System.Drawing.Point(117, 18);
+            this.txtAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Properties.MaxLength = 20;
             this.txtAccount.Properties.ValidateOnEnterKey = true;
-            this.txtAccount.Size = new System.Drawing.Size(166, 26);
+            this.txtAccount.Size = new System.Drawing.Size(233, 36);
             this.txtAccount.StyleController = this.LC_Edit;
             this.txtAccount.TabIndex = 14;
             // 
@@ -203,25 +230,28 @@
             this.LC_Edit.Controls.Add(this.txtLastUpdateUser);
             this.LC_Edit.Dock = System.Windows.Forms.DockStyle.Left;
             this.LC_Edit.Location = new System.Drawing.Point(0, 0);
+            this.LC_Edit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LC_Edit.Name = "LC_Edit";
             this.LC_Edit.Root = this.LCGroup_Edit;
-            this.LC_Edit.Size = new System.Drawing.Size(495, 587);
+            this.LC_Edit.Size = new System.Drawing.Size(707, 923);
             this.LC_Edit.TabIndex = 0;
             this.LC_Edit.Text = "layoutControl1";
             // 
             // txxtPassword
             // 
-            this.txxtPassword.Location = new System.Drawing.Point(316, 72);
+            this.txxtPassword.Location = new System.Drawing.Point(455, 102);
+            this.txxtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txxtPassword.Name = "txxtPassword";
             this.txxtPassword.Properties.UseSystemPasswordChar = true;
-            this.txxtPassword.Size = new System.Drawing.Size(167, 26);
+            this.txxtPassword.Size = new System.Drawing.Size(234, 36);
             this.txxtPassword.StyleController = this.LC_Edit;
             this.txxtPassword.TabIndex = 15;
             // 
             // txtLastUpdateDate
             // 
             this.txtLastUpdateDate.EditValue = null;
-            this.txtLastUpdateDate.Location = new System.Drawing.Point(316, 162);
+            this.txtLastUpdateDate.Location = new System.Drawing.Point(455, 228);
+            this.txtLastUpdateDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastUpdateDate.Name = "txtLastUpdateDate";
             this.txtLastUpdateDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -231,14 +261,15 @@
             this.txtLastUpdateDate.Properties.MaxValue = new System.DateTime(2200, 1, 1, 0, 0, 0, 0);
             this.txtLastUpdateDate.Properties.MinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.txtLastUpdateDate.Properties.ValidateOnEnterKey = true;
-            this.txtLastUpdateDate.Size = new System.Drawing.Size(167, 26);
+            this.txtLastUpdateDate.Size = new System.Drawing.Size(234, 36);
             this.txtLastUpdateDate.StyleController = this.LC_Edit;
             this.txtLastUpdateDate.TabIndex = 4;
             // 
             // txtCreateDate
             // 
             this.txtCreateDate.EditValue = null;
-            this.txtCreateDate.Location = new System.Drawing.Point(316, 132);
+            this.txtCreateDate.Location = new System.Drawing.Point(455, 186);
+            this.txtCreateDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCreateDate.Name = "txtCreateDate";
             this.txtCreateDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -248,102 +279,111 @@
             this.txtCreateDate.Properties.MaxValue = new System.DateTime(2200, 1, 1, 0, 0, 0, 0);
             this.txtCreateDate.Properties.MinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.txtCreateDate.Properties.ValidateOnEnterKey = true;
-            this.txtCreateDate.Size = new System.Drawing.Size(167, 26);
+            this.txtCreateDate.Size = new System.Drawing.Size(234, 36);
             this.txtCreateDate.StyleController = this.LC_Edit;
             this.txtCreateDate.TabIndex = 6;
             // 
             // txtIsSysLock
             // 
             this.txtIsSysLock.EditValue = null;
-            this.txtIsSysLock.Location = new System.Drawing.Point(249, 42);
+            this.txtIsSysLock.Location = new System.Drawing.Point(356, 60);
+            this.txtIsSysLock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIsSysLock.Name = "txtIsSysLock";
             this.txtIsSysLock.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             this.txtIsSysLock.Properties.Caption = "锁定";
             this.txtIsSysLock.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             this.txtIsSysLock.Properties.ValueChecked = "Y";
             this.txtIsSysLock.Properties.ValueUnchecked = "N";
-            this.txtIsSysLock.Size = new System.Drawing.Size(234, 23);
+            this.txtIsSysLock.Size = new System.Drawing.Size(333, 33);
             this.txtIsSysLock.StyleController = this.LC_Edit;
             this.txtIsSysLock.TabIndex = 8;
             // 
             // txtIsSysAdmain
             // 
             this.txtIsSysAdmain.EditValue = null;
-            this.txtIsSysAdmain.Location = new System.Drawing.Point(249, 12);
+            this.txtIsSysAdmain.Location = new System.Drawing.Point(356, 18);
+            this.txtIsSysAdmain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIsSysAdmain.Name = "txtIsSysAdmain";
             this.txtIsSysAdmain.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
             this.txtIsSysAdmain.Properties.Caption = "是否是管理员";
             this.txtIsSysAdmain.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             this.txtIsSysAdmain.Properties.ValueChecked = "Y";
             this.txtIsSysAdmain.Properties.ValueUnchecked = "N";
-            this.txtIsSysAdmain.Size = new System.Drawing.Size(234, 23);
+            this.txtIsSysAdmain.Size = new System.Drawing.Size(333, 33);
             this.txtIsSysAdmain.StyleController = this.LC_Edit;
             this.txtIsSysAdmain.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(316, 102);
+            this.txtEmail.Location = new System.Drawing.Point(455, 144);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.MaxLength = 400;
             this.txtEmail.Properties.ValidateOnEnterKey = true;
-            this.txtEmail.Size = new System.Drawing.Size(167, 26);
+            this.txtEmail.Size = new System.Drawing.Size(234, 36);
             this.txtEmail.StyleController = this.LC_Edit;
             this.txtEmail.TabIndex = 10;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(79, 102);
+            this.txtPhone.Location = new System.Drawing.Point(117, 144);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.MaxLength = 20;
             this.txtPhone.Properties.ValidateOnEnterKey = true;
-            this.txtPhone.Size = new System.Drawing.Size(166, 26);
+            this.txtPhone.Size = new System.Drawing.Size(233, 36);
             this.txtPhone.StyleController = this.LC_Edit;
             this.txtPhone.TabIndex = 11;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(79, 42);
+            this.txtUserName.Location = new System.Drawing.Point(117, 60);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 40;
             this.txtUserName.Properties.ValidateOnEnterKey = true;
-            this.txtUserName.Size = new System.Drawing.Size(166, 26);
+            this.txtUserName.Size = new System.Drawing.Size(233, 36);
             this.txtUserName.StyleController = this.LC_Edit;
             this.txtUserName.TabIndex = 12;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(79, 72);
+            this.txtPassword.Location = new System.Drawing.Point(117, 102);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 200;
             this.txtPassword.Properties.UseSystemPasswordChar = true;
             this.txtPassword.Properties.ValidateOnEnterKey = true;
-            this.txtPassword.Size = new System.Drawing.Size(166, 26);
+            this.txtPassword.Size = new System.Drawing.Size(233, 36);
             this.txtPassword.StyleController = this.LC_Edit;
             this.txtPassword.TabIndex = 13;
+            this.txtPassword.EditValueChanged += new System.EventHandler(this.txtPassword_EditValueChanged);
             // 
             // txtCreateUser
             // 
-            this.txtCreateUser.Location = new System.Drawing.Point(79, 132);
+            this.txtCreateUser.Location = new System.Drawing.Point(117, 186);
+            this.txtCreateUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCreateUser.Name = "txtCreateUser";
             this.txtCreateUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtCreateUser.Properties.MaxLength = 20;
             this.txtCreateUser.Properties.NullText = "";
             this.txtCreateUser.Properties.ValidateOnEnterKey = true;
-            this.txtCreateUser.Size = new System.Drawing.Size(166, 26);
+            this.txtCreateUser.Size = new System.Drawing.Size(233, 36);
             this.txtCreateUser.StyleController = this.LC_Edit;
             this.txtCreateUser.TabIndex = 7;
             // 
             // txtLastUpdateUser
             // 
-            this.txtLastUpdateUser.Location = new System.Drawing.Point(79, 162);
+            this.txtLastUpdateUser.Location = new System.Drawing.Point(117, 228);
+            this.txtLastUpdateUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastUpdateUser.Name = "txtLastUpdateUser";
             this.txtLastUpdateUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtLastUpdateUser.Properties.MaxLength = 20;
             this.txtLastUpdateUser.Properties.NullText = "";
             this.txtLastUpdateUser.Properties.ValidateOnEnterKey = true;
-            this.txtLastUpdateUser.Size = new System.Drawing.Size(166, 26);
+            this.txtLastUpdateUser.Size = new System.Drawing.Size(233, 36);
             this.txtLastUpdateUser.StyleController = this.LC_Edit;
             this.txtLastUpdateUser.TabIndex = 5;
             // 
@@ -371,18 +411,18 @@
             this.LCItem_LastUpdateDate});
             this.LCGroup_Edit.Location = new System.Drawing.Point(0, 0);
             this.LCGroup_Edit.Name = "LCGroup_Edit";
-            this.LCGroup_Edit.Size = new System.Drawing.Size(495, 587);
+            this.LCGroup_Edit.Size = new System.Drawing.Size(707, 923);
             this.LCGroup_Edit.TextVisible = false;
             // 
             // LCItem_UserName
             // 
             this.LCItem_UserName.Control = this.txtUserName;
             this.LCItem_UserName.CustomizationFormText = "名称";
-            this.LCItem_UserName.Location = new System.Drawing.Point(0, 30);
+            this.LCItem_UserName.Location = new System.Drawing.Point(0, 42);
             this.LCItem_UserName.Name = "LCItem_UserName";
-            this.LCItem_UserName.Size = new System.Drawing.Size(237, 30);
+            this.LCItem_UserName.Size = new System.Drawing.Size(338, 42);
             this.LCItem_UserName.Text = "名称";
-            this.LCItem_UserName.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_UserName.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_Account
             // 
@@ -390,17 +430,17 @@
             this.LCItem_Account.CustomizationFormText = "账号";
             this.LCItem_Account.Location = new System.Drawing.Point(0, 0);
             this.LCItem_Account.Name = "LCItem_Account";
-            this.LCItem_Account.Size = new System.Drawing.Size(237, 30);
+            this.LCItem_Account.Size = new System.Drawing.Size(338, 42);
             this.LCItem_Account.Text = "账号";
-            this.LCItem_Account.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_Account.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_IsAdmain
             // 
             this.LCItem_IsAdmain.Control = this.txtIsSysAdmain;
             this.LCItem_IsAdmain.CustomizationFormText = "是否是管理员";
-            this.LCItem_IsAdmain.Location = new System.Drawing.Point(237, 0);
+            this.LCItem_IsAdmain.Location = new System.Drawing.Point(338, 0);
             this.LCItem_IsAdmain.Name = "LCItem_IsAdmain";
-            this.LCItem_IsAdmain.Size = new System.Drawing.Size(238, 30);
+            this.LCItem_IsAdmain.Size = new System.Drawing.Size(339, 42);
             this.LCItem_IsAdmain.Text = " ";
             this.LCItem_IsAdmain.TextSize = new System.Drawing.Size(0, 0);
             this.LCItem_IsAdmain.TextVisible = false;
@@ -409,9 +449,9 @@
             // 
             this.LCItem_IsLock.Control = this.txtIsSysLock;
             this.LCItem_IsLock.CustomizationFormText = "锁定";
-            this.LCItem_IsLock.Location = new System.Drawing.Point(237, 30);
+            this.LCItem_IsLock.Location = new System.Drawing.Point(338, 42);
             this.LCItem_IsLock.Name = "LCItem_IsLock";
-            this.LCItem_IsLock.Size = new System.Drawing.Size(238, 30);
+            this.LCItem_IsLock.Size = new System.Drawing.Size(339, 42);
             this.LCItem_IsLock.Text = " ";
             this.LCItem_IsLock.TextSize = new System.Drawing.Size(0, 0);
             this.LCItem_IsLock.TextVisible = false;
@@ -420,81 +460,81 @@
             // 
             this.LCItem_Password.Control = this.txtPassword;
             this.LCItem_Password.CustomizationFormText = "密码";
-            this.LCItem_Password.Location = new System.Drawing.Point(0, 60);
+            this.LCItem_Password.Location = new System.Drawing.Point(0, 84);
             this.LCItem_Password.Name = "LCItem_Password";
-            this.LCItem_Password.Size = new System.Drawing.Size(237, 30);
+            this.LCItem_Password.Size = new System.Drawing.Size(338, 42);
             this.LCItem_Password.Text = "密码";
-            this.LCItem_Password.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_Password.TextSize = new System.Drawing.Size(96, 29);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txxtPassword;
             this.layoutControlItem1.CustomizationFormText = "确认密码";
-            this.layoutControlItem1.Location = new System.Drawing.Point(237, 60);
+            this.layoutControlItem1.Location = new System.Drawing.Point(338, 84);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(238, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(339, 42);
             this.layoutControlItem1.Text = "确认密码";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(64, 19);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_Phone
             // 
             this.LCItem_Phone.Control = this.txtPhone;
             this.LCItem_Phone.CustomizationFormText = "电话";
-            this.LCItem_Phone.Location = new System.Drawing.Point(0, 90);
+            this.LCItem_Phone.Location = new System.Drawing.Point(0, 126);
             this.LCItem_Phone.Name = "LCItem_Phone";
-            this.LCItem_Phone.Size = new System.Drawing.Size(237, 30);
+            this.LCItem_Phone.Size = new System.Drawing.Size(338, 42);
             this.LCItem_Phone.Text = "电话";
-            this.LCItem_Phone.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_Phone.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_Email
             // 
             this.LCItem_Email.Control = this.txtEmail;
             this.LCItem_Email.CustomizationFormText = "Email";
-            this.LCItem_Email.Location = new System.Drawing.Point(237, 90);
+            this.LCItem_Email.Location = new System.Drawing.Point(338, 126);
             this.LCItem_Email.Name = "LCItem_Email";
-            this.LCItem_Email.Size = new System.Drawing.Size(238, 30);
+            this.LCItem_Email.Size = new System.Drawing.Size(339, 42);
             this.LCItem_Email.Text = "Email";
-            this.LCItem_Email.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_Email.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_CreateUser
             // 
             this.LCItem_CreateUser.Control = this.txtCreateUser;
             this.LCItem_CreateUser.CustomizationFormText = "创建人";
-            this.LCItem_CreateUser.Location = new System.Drawing.Point(0, 120);
+            this.LCItem_CreateUser.Location = new System.Drawing.Point(0, 168);
             this.LCItem_CreateUser.Name = "LCItem_CreateUser";
-            this.LCItem_CreateUser.Size = new System.Drawing.Size(237, 30);
+            this.LCItem_CreateUser.Size = new System.Drawing.Size(338, 42);
             this.LCItem_CreateUser.Text = "创建人";
-            this.LCItem_CreateUser.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_CreateUser.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_CreateDate
             // 
             this.LCItem_CreateDate.Control = this.txtCreateDate;
             this.LCItem_CreateDate.CustomizationFormText = "创建日期";
-            this.LCItem_CreateDate.Location = new System.Drawing.Point(237, 120);
+            this.LCItem_CreateDate.Location = new System.Drawing.Point(338, 168);
             this.LCItem_CreateDate.Name = "LCItem_CreateDate";
-            this.LCItem_CreateDate.Size = new System.Drawing.Size(238, 30);
+            this.LCItem_CreateDate.Size = new System.Drawing.Size(339, 42);
             this.LCItem_CreateDate.Text = "创建日期";
-            this.LCItem_CreateDate.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_CreateDate.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_LastUpdateUser
             // 
             this.LCItem_LastUpdateUser.Control = this.txtLastUpdateUser;
             this.LCItem_LastUpdateUser.CustomizationFormText = "修改人";
-            this.LCItem_LastUpdateUser.Location = new System.Drawing.Point(0, 150);
+            this.LCItem_LastUpdateUser.Location = new System.Drawing.Point(0, 210);
             this.LCItem_LastUpdateUser.Name = "LCItem_LastUpdateUser";
-            this.LCItem_LastUpdateUser.Size = new System.Drawing.Size(237, 417);
+            this.LCItem_LastUpdateUser.Size = new System.Drawing.Size(338, 683);
             this.LCItem_LastUpdateUser.Text = "修改人";
-            this.LCItem_LastUpdateUser.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_LastUpdateUser.TextSize = new System.Drawing.Size(96, 29);
             // 
             // LCItem_LastUpdateDate
             // 
             this.LCItem_LastUpdateDate.Control = this.txtLastUpdateDate;
             this.LCItem_LastUpdateDate.CustomizationFormText = "修改日期";
-            this.LCItem_LastUpdateDate.Location = new System.Drawing.Point(237, 150);
+            this.LCItem_LastUpdateDate.Location = new System.Drawing.Point(338, 210);
             this.LCItem_LastUpdateDate.Name = "LCItem_LastUpdateDate";
-            this.LCItem_LastUpdateDate.Size = new System.Drawing.Size(238, 417);
+            this.LCItem_LastUpdateDate.Size = new System.Drawing.Size(339, 683);
             this.LCItem_LastUpdateDate.Text = "修改日期";
-            this.LCItem_LastUpdateDate.TextSize = new System.Drawing.Size(64, 19);
+            this.LCItem_LastUpdateDate.TextSize = new System.Drawing.Size(96, 29);
             // 
             // gc_Account
             // 
@@ -506,11 +546,12 @@
             // 
             // txts_Account
             // 
-            this.txts_Account.Location = new System.Drawing.Point(42, 12);
+            this.txts_Account.Location = new System.Drawing.Point(63, 18);
+            this.txts_Account.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txts_Account.Name = "txts_Account";
             this.txts_Account.Properties.MaxLength = 20;
             this.txts_Account.Properties.ValidateOnEnterKey = true;
-            this.txts_Account.Size = new System.Drawing.Size(190, 20);
+            this.txts_Account.Size = new System.Drawing.Size(269, 28);
             this.txts_Account.StyleController = this.LC_Search;
             this.txts_Account.TabIndex = 10;
             // 
@@ -522,39 +563,43 @@
             this.LC_Search.Controls.Add(this.txts_Account);
             this.LC_Search.Dock = System.Windows.Forms.DockStyle.Left;
             this.LC_Search.Location = new System.Drawing.Point(0, 0);
+            this.LC_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LC_Search.Name = "LC_Search";
             this.LC_Search.Root = this.LCGroup_Search;
-            this.LC_Search.Size = new System.Drawing.Size(468, 74);
+            this.LC_Search.Size = new System.Drawing.Size(669, 116);
             this.LC_Search.TabIndex = 0;
             this.LC_Search.Text = "layoutControl1";
             // 
             // txts_Email
             // 
-            this.txts_Email.Location = new System.Drawing.Point(266, 36);
+            this.txts_Email.Location = new System.Drawing.Point(383, 52);
+            this.txts_Email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txts_Email.Name = "txts_Email";
             this.txts_Email.Properties.MaxLength = 400;
             this.txts_Email.Properties.ValidateOnEnterKey = true;
-            this.txts_Email.Size = new System.Drawing.Size(190, 20);
+            this.txts_Email.Size = new System.Drawing.Size(268, 28);
             this.txts_Email.StyleController = this.LC_Search;
             this.txts_Email.TabIndex = 6;
             // 
             // txts_Phone
             // 
-            this.txts_Phone.Location = new System.Drawing.Point(42, 36);
+            this.txts_Phone.Location = new System.Drawing.Point(63, 52);
+            this.txts_Phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txts_Phone.Name = "txts_Phone";
             this.txts_Phone.Properties.MaxLength = 20;
             this.txts_Phone.Properties.ValidateOnEnterKey = true;
-            this.txts_Phone.Size = new System.Drawing.Size(190, 20);
+            this.txts_Phone.Size = new System.Drawing.Size(269, 28);
             this.txts_Phone.StyleController = this.LC_Search;
             this.txts_Phone.TabIndex = 7;
             // 
             // txts_UserName
             // 
-            this.txts_UserName.Location = new System.Drawing.Point(266, 12);
+            this.txts_UserName.Location = new System.Drawing.Point(383, 18);
+            this.txts_UserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txts_UserName.Name = "txts_UserName";
             this.txts_UserName.Properties.MaxLength = 40;
             this.txts_UserName.Properties.ValidateOnEnterKey = true;
-            this.txts_UserName.Size = new System.Drawing.Size(190, 20);
+            this.txts_UserName.Size = new System.Drawing.Size(268, 28);
             this.txts_UserName.StyleController = this.LC_Search;
             this.txts_UserName.TabIndex = 8;
             // 
@@ -572,7 +617,7 @@
             this.LCItems_Phone});
             this.LCGroup_Search.Location = new System.Drawing.Point(0, 0);
             this.LCGroup_Search.Name = "LCGroup_Search";
-            this.LCGroup_Search.Size = new System.Drawing.Size(468, 74);
+            this.LCGroup_Search.Size = new System.Drawing.Size(669, 116);
             this.LCGroup_Search.TextVisible = false;
             // 
             // LCItems_Account
@@ -581,39 +626,39 @@
             this.LCItems_Account.CustomizationFormText = "账号";
             this.LCItems_Account.Location = new System.Drawing.Point(0, 0);
             this.LCItems_Account.Name = "LCItem_Account";
-            this.LCItems_Account.Size = new System.Drawing.Size(224, 24);
+            this.LCItems_Account.Size = new System.Drawing.Size(320, 34);
             this.LCItems_Account.Text = "账号";
-            this.LCItems_Account.TextSize = new System.Drawing.Size(27, 14);
+            this.LCItems_Account.TextSize = new System.Drawing.Size(42, 22);
             // 
             // LCItems_Email
             // 
             this.LCItems_Email.Control = this.txts_Email;
             this.LCItems_Email.CustomizationFormText = "Email";
-            this.LCItems_Email.Location = new System.Drawing.Point(224, 24);
+            this.LCItems_Email.Location = new System.Drawing.Point(320, 34);
             this.LCItems_Email.Name = "LCItem_Email";
-            this.LCItems_Email.Size = new System.Drawing.Size(224, 30);
+            this.LCItems_Email.Size = new System.Drawing.Size(319, 52);
             this.LCItems_Email.Text = "Email";
-            this.LCItems_Email.TextSize = new System.Drawing.Size(27, 14);
+            this.LCItems_Email.TextSize = new System.Drawing.Size(42, 22);
             // 
             // LCItems_UserName
             // 
             this.LCItems_UserName.Control = this.txts_UserName;
             this.LCItems_UserName.CustomizationFormText = "名称";
-            this.LCItems_UserName.Location = new System.Drawing.Point(224, 0);
+            this.LCItems_UserName.Location = new System.Drawing.Point(320, 0);
             this.LCItems_UserName.Name = "LCItem_UserName";
-            this.LCItems_UserName.Size = new System.Drawing.Size(224, 24);
+            this.LCItems_UserName.Size = new System.Drawing.Size(319, 34);
             this.LCItems_UserName.Text = "姓名";
-            this.LCItems_UserName.TextSize = new System.Drawing.Size(27, 14);
+            this.LCItems_UserName.TextSize = new System.Drawing.Size(42, 22);
             // 
             // LCItems_Phone
             // 
             this.LCItems_Phone.Control = this.txts_Phone;
             this.LCItems_Phone.CustomizationFormText = "电话";
-            this.LCItems_Phone.Location = new System.Drawing.Point(0, 24);
+            this.LCItems_Phone.Location = new System.Drawing.Point(0, 34);
             this.LCItems_Phone.Name = "LCItem_Phone";
-            this.LCItems_Phone.Size = new System.Drawing.Size(224, 30);
+            this.LCItems_Phone.Size = new System.Drawing.Size(320, 52);
             this.LCItems_Phone.Text = "电话";
-            this.LCItems_Phone.TextSize = new System.Drawing.Size(27, 14);
+            this.LCItems_Phone.TextSize = new System.Drawing.Size(42, 22);
             // 
             // gc_Password
             // 
@@ -719,13 +764,15 @@
             // gcMainData
             // 
             this.gcMainData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcMainData.Location = new System.Drawing.Point(0, 74);
+            this.gcMainData.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gcMainData.Location = new System.Drawing.Point(0, 116);
             this.gcMainData.MainView = this.gvMainData;
+            this.gcMainData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gcMainData.Name = "gcMainData";
             this.gcMainData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lue_UserName,
             this.repositoryItemCheckEdit2});
-            this.gcMainData.Size = new System.Drawing.Size(951, 513);
+            this.gcMainData.Size = new System.Drawing.Size(1357, 807);
             this.gcMainData.TabIndex = 1;
             this.gcMainData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMainData});
@@ -753,18 +800,20 @@
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(496, 15);
+            this.btn_Search.Location = new System.Drawing.Point(709, 24);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(75, 41);
+            this.btn_Search.Size = new System.Drawing.Size(107, 64);
             this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "查找";
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Clear
             // 
-            this.btn_Clear.Location = new System.Drawing.Point(595, 15);
+            this.btn_Clear.Location = new System.Drawing.Point(850, 24);
+            this.btn_Clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(75, 41);
+            this.btn_Clear.Size = new System.Drawing.Size(107, 64);
             this.btn_Clear.TabIndex = 1;
             this.btn_Clear.Text = "清空";
             this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
@@ -773,10 +822,11 @@
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 374);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(370, 587);
+            this.xtraTabControl1.Size = new System.Drawing.Size(610, 549);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -785,8 +835,9 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.gc_Detail);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(364, 558);
+            this.xtraTabPage1.Size = new System.Drawing.Size(600, 504);
             this.xtraTabPage1.Text = "角色";
             // 
             // gc_Detail
@@ -804,13 +855,15 @@
             this.gc_Detail.EmbeddedNavigator.Buttons.Prev.Visible = false;
             this.gc_Detail.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
             this.gc_Detail.EmbeddedNavigator.Buttons.Remove.ImageIndex = 2;
+            this.gc_Detail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gc_Detail.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gc_Detail_EmbeddedNavigator_ButtonClick);
             this.gc_Detail.Location = new System.Drawing.Point(0, 0);
             this.gc_Detail.MainView = this.gv_Detail;
+            this.gc_Detail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gc_Detail.Name = "gc_Detail";
             this.gc_Detail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lue_RoleName});
-            this.gc_Detail.Size = new System.Drawing.Size(364, 558);
+            this.gc_Detail.Size = new System.Drawing.Size(600, 504);
             this.gc_Detail.TabIndex = 3;
             this.gc_Detail.UseEmbeddedNavigator = true;
             this.gc_Detail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -872,18 +925,10 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.tree_ModuleEx);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(364, 558);
-            this.xtraTabPage2.Text = "权限";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.xtraTabControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(495, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 587);
-            this.panel1.TabIndex = 2;
+            this.xtraTabPage2.Size = new System.Drawing.Size(600, 504);
+            this.xtraTabPage2.Text = "权限预览";
             // 
             // tree_ModuleEx
             // 
@@ -891,20 +936,129 @@
             this.tree_ModuleEx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tree_ModuleEx.EditData = null;
             this.tree_ModuleEx.Location = new System.Drawing.Point(0, 0);
+            this.tree_ModuleEx.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tree_ModuleEx.Name = "tree_ModuleEx";
             this.tree_ModuleEx.OptionsBehavior.Editable = false;
             this.tree_ModuleEx.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
             this.tree_ModuleEx.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
             this.tree_ModuleEx.OptionsView.ShowCheckBoxes = true;
             this.tree_ModuleEx.OptionsView.ShowColumns = false;
-            this.tree_ModuleEx.Size = new System.Drawing.Size(364, 558);
+            this.tree_ModuleEx.Size = new System.Drawing.Size(600, 504);
             this.tree_ModuleEx.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.xtraTabControl1);
+            this.panel1.Controls.Add(this.splitterControl1);
+            this.panel1.Controls.Add(this.gc_DBList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(707, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(610, 923);
+            this.panel1.TabIndex = 2;
+            // 
+            // gc_DBList
+            // 
+            this.gc_DBList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Append.ImageIndex = 0;
+            this.gc_DBList.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.First.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.ImageList = this.imageList1;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Last.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Next.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Prev.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gc_DBList.EmbeddedNavigator.Buttons.Remove.ImageIndex = 2;
+            this.gc_DBList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gc_DBList.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gc_DBList_EmbeddedNavigator_ButtonClick);
+            this.gc_DBList.Location = new System.Drawing.Point(0, 0);
+            this.gc_DBList.MainView = this.gv_DBList;
+            this.gc_DBList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gc_DBList.Name = "gc_DBList";
+            this.gc_DBList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit1,
+            this.lue_DBList});
+            this.gc_DBList.Size = new System.Drawing.Size(610, 366);
+            this.gc_DBList.TabIndex = 17;
+            this.gc_DBList.UseEmbeddedNavigator = true;
+            this.gc_DBList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gv_DBList});
+            // 
+            // gv_DBList
+            // 
+            this.gv_DBList.ColumnPanelRowHeight = 35;
+            this.gv_DBList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.gv_DBList.GridControl = this.gc_DBList;
+            this.gv_DBList.Name = "gv_DBList";
+            this.gv_DBList.OptionsView.ColumnAutoWidth = false;
+            this.gv_DBList.OptionsView.ShowGroupPanel = false;
+            this.gv_DBList.RowHeight = 35;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "账套名称";
+            this.gridColumn3.ColumnEdit = this.lue_DBList;
+            this.gridColumn3.FieldName = "DBCode";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            // 
+            // lue_DBList
+            // 
+            this.lue_DBList.AutoHeight = false;
+            this.lue_DBList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_DBList.Name = "lue_DBList";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "管理员";
+            this.gridColumn4.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn4.FieldName = "IsDBAdmin";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 1;
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Caption = "Check";
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.repositoryItemCheckEdit1.ValueChecked = "Y";
+            this.repositoryItemCheckEdit1.ValueUnchecked = "N";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "锁定";
+            this.gridColumn5.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn5.FieldName = "IsDBLock";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            // 
+            // splitterControl1
+            // 
+            this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterControl1.Location = new System.Drawing.Point(0, 366);
+            this.splitterControl1.Name = "splitterControl1";
+            this.splitterControl1.Size = new System.Drawing.Size(610, 8);
+            this.splitterControl1.TabIndex = 18;
+            this.splitterControl1.TabStop = false;
             // 
             // frmMyUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 616);
+            this.ClientSize = new System.Drawing.Size(1367, 968);
+            this.Margin = new System.Windows.Forms.Padding(27, 49, 27, 49);
             this.Name = "frmMyUser";
             this.Text = "用户管理";
             this.Load += new System.EventHandler(this.frmMyUser_Load);
@@ -966,8 +1120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_Detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_RoleName)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tree_ModuleEx)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gc_DBList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_DBList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_DBList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1043,5 +1201,13 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lue_RoleName;
         private Library.MyControl.ucModuleTreeList tree_ModuleEx;
+        private DevExpress.XtraEditors.SplitterControl splitterControl1;
+        private DevExpress.XtraGrid.GridControl gc_DBList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_DBList;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lue_DBList;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }
