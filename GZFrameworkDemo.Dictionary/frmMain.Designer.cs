@@ -34,6 +34,7 @@
             this.btn_Customer = new DevExpress.XtraEditors.SimpleButton();
             this.btnStoragePosition = new DevExpress.XtraEditors.SimpleButton();
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSupplier = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -52,6 +53,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_Customer);
             this.flowLayoutPanel1.Controls.Add(this.btnStoragePosition);
             this.flowLayoutPanel1.Controls.Add(this.btnProduct);
+            this.flowLayoutPanel1.Controls.Add(this.btnSupplier);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 19);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -108,6 +110,16 @@
             this.btnProduct.Text = "产品资料";
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
+            // btnSupplier
+            // 
+            this.btnSupplier.Location = new System.Drawing.Point(699, 5);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(131, 123);
+            this.btnSupplier.TabIndex = 3;
+            this.btnSupplier.Text = "供应商资料";
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -131,5 +143,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_Customer;
         private DevExpress.XtraEditors.SimpleButton btnStoragePosition;
         private DevExpress.XtraEditors.SimpleButton btnProduct;
+        private DevExpress.XtraEditors.SimpleButton btnSupplier;
     }
 }

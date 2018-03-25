@@ -20,6 +20,7 @@ namespace GZFrameworkDemo.Dictionary
             this.AddFunction(btn_Customer, typeof(frmCustomer), "客户资料");
             this.AddFunction(btnStoragePosition, typeof(frmStoragePosition), "仓位资料");
             this.AddFunction(btnProduct, typeof(frmProduct), "产品资料");
+            this.AddFunction(btnSupplier, typeof(frmSupplier), "供应商资料");
         }
 
         private void btnCommonDataDictNew_Click(object sender, EventArgs e)
@@ -47,6 +48,11 @@ namespace GZFrameworkDemo.Dictionary
         private void btnProduct_Click(object sender, EventArgs e)
         {
             this.ShowChildForm(typeof(frmProduct));
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            this.ShowChildForm(typeof(frmSupplier));
         }
     }
 }

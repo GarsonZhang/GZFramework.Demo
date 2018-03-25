@@ -10,6 +10,7 @@ namespace GZFrameworkDemo.Business.CustomerEnum
         染料名称 = 1,
         毛料规格,
         客户状态,
+        供应商状态,
         产品材质,
         单位
     }
