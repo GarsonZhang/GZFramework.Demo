@@ -55,6 +55,8 @@
     <Compile Include="bllData_CompanyInfo.cs" />
     <Compile Include="bllGridViewLayout.cs" />
     <Compile Include="Business\bllCustomer.cs" />
+    <Compile Include="Business\bllProduct.cs" />
+    <Compile Include="Business\bllStoragePosition.cs" />
     <Compile Include="CustomerEnum\EnumCommonDicData.cs" />
     <Compile Include="bllLogin.cs" />
     <Compile Include="bllModules.cs" />

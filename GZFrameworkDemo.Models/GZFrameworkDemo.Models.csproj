@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\dt_Data_Customer.cs" />
+    <Compile Include="Business\dt_Data_Product.cs" />
+    <Compile Include="Business\dt_Data_StoragePosition.cs" />
+    <Compile Include="DocSN\Business\SNProduct.cs" />
     <Compile Include="DocSN\Business\SN_PO.cs" />
     <Compile Include="DocSN\GenerateDocSNRule.cs" />
     <Compile Include="DocSN\Business\SN_Customer.cs" />

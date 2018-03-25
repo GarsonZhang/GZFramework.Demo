@@ -18,6 +18,8 @@ namespace GZFrameworkDemo.Dictionary
             this.AddFunction(btnCommonDataDictNew, typeof(frmCommonDataDictNew), "公共字典");
             this.AddFunction(btnDocSNHeader, typeof(frmDocSNHeader), "单据自定义管理");
             this.AddFunction(btn_Customer, typeof(frmCustomer), "客户资料");
+            this.AddFunction(btnStoragePosition, typeof(frmStoragePosition), "仓位资料");
+            this.AddFunction(btnProduct, typeof(frmProduct), "产品资料");
         }
 
         private void btnCommonDataDictNew_Click(object sender, EventArgs e)
@@ -35,6 +37,16 @@ namespace GZFrameworkDemo.Dictionary
         private void btn_Customer_Click(object sender, EventArgs e)
         {
             this.ShowChildForm(typeof(frmCustomer));
+        }
+
+        private void btnStoragePosition_Click(object sender, EventArgs e)
+        {
+            this.ShowChildForm(typeof(frmStoragePosition));
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            this.ShowChildForm(typeof(frmProduct));
         }
     }
 }
