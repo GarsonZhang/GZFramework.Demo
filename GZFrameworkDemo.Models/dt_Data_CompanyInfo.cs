@@ -29,7 +29,7 @@ namespace GZFrameworkDemo.Models
         /// 自增列
         /// </summary>
         [ModelPrimaryKey]
-        public const string RowID = "RowID";
+        public const string isid = "isid";
 
         /// <summary>
         /// 公司名称
