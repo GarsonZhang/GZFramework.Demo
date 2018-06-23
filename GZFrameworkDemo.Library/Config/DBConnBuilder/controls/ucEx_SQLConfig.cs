@@ -98,7 +98,8 @@ namespace GZFrameworkDemo.Library.Config.DBConnBuilder.controls
             try
             {
                 conn.Open();
-                string str = "SELECT name FROM  sys.sysdatabases WHERE dbid>6";
+                //string str = "SELECT name FROM  sys.sysdatabases WHERE dbid>6";
+                string str = "SELECT name FROM  sys.sysdatabases";
                 SqlCommand cmd = new SqlCommand(str, conn);
                 SqlDataAdapter sdap = new SqlDataAdapter();
                 sdap.SelectCommand = cmd;

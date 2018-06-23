@@ -123,6 +123,7 @@ namespace GZFrameworkDemo.Main
 
             bllDataBaseList bll = new bllDataBaseList();
             DataTable dt = bll.GetTableData(sys_DataBaseList._TableName);
+            //dt.Rows.InsertAt(0,)
             txt_DataBaseList.Properties.DataSource = dt;
         }
     }

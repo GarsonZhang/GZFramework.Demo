@@ -17,7 +17,7 @@ namespace GZFrameworkDemo.Library.Config.DBConnBuilder
         public static DialogResult ShowForm()
         {
             frmDBConfigNew frm = new frmDBConfigNew();
-            frm.ShowIcon = frm.ShowInTaskbar = false;
+            frm.ShowIcon = frm.ShowInTaskbar = true;
             frm.StartPosition = FormStartPosition.CenterScreen;
 
             return frm.ShowDialog();

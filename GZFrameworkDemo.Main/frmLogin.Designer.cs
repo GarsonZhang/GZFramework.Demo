@@ -172,6 +172,7 @@
             this.txt_DataBaseList.Location = new System.Drawing.Point(369, 22);
             this.txt_DataBaseList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_DataBaseList.Name = "txt_DataBaseList";
+            this.txt_DataBaseList.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txt_DataBaseList.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txt_DataBaseList.Properties.Appearance.Options.UseFont = true;
             this.txt_DataBaseList.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

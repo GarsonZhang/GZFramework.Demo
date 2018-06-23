@@ -68,6 +68,11 @@ namespace GZFrameworkDemo.Main
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
             GZFramework.UI.Dev.WaiteServer.CloseWaite();
+            if (e.Exception is System.Data.SqlClient.SqlException)
+            {
+                frmExceptionShow.Show(e.Exception);
+                return;
+            }
             frmExceptionShow.Show(e.Exception.InnerException ?? e.Exception);
         }
     }
